@@ -5,6 +5,7 @@
         position: absolute;
         left    : 50px;
         top     : 0;
+        z-index : 1;
     }
 
     >header {
@@ -12,5 +13,109 @@
         background-image   : url(/images/main.png);
         background-repeat  : no-repeat;
         background-position: center top;
+        position           : relative;
+        margin-bottom      : 100px;
+
+        >.panel {
+            position     : absolute;
+            width        : 100%;
+            left         : 0;
+            bottom       : 40px;
+            text-align   : center;
+            font-size    : 40px;
+            line-height  : 1.5em;
+            padding-right: 100px;
+        }
+    }
+
+    >section {
+        width  : 1200px;
+        margin : auto;
+        padding: 100px 0;
+
+        >.banner {
+            margin-bottom: 40px;
+            text-align   : center;
+        }
+
+        >h2 {
+            font-size    : 50px;
+            font-family  : DungGeunMo;
+            color        : #FF00F6;
+            text-shadow  : 5px 5px 5px #656565;
+            margin-bottom: 40px;
+            text-align   : center;
+        }
+
+        p {
+            font-size  : 30px;
+            line-height: 1.7em;
+
+            a {
+                color: #BFC500;
+            }
+        }
+
+        >.loadmap {
+            margin-top: 100px;
+
+            >h3 {
+                color      : #00DCFF;
+                text-shadow: 5px 5px 5px #656565;
+                font-size  : 50px;
+                font-family: DungGeunMo;
+            }
+
+            >p {
+                background-color: #121013;
+                height          : 195px;
+            }
+
+            &:nth-child(odd) {
+                >h3 {
+                    text-align: right;
+                }
+            }
+
+            &:nth-child(2) {
+                >p {
+                    border    : 5px solid #4B6F67;
+                    box-shadow: 15px 15px 10px 0px rgba(75, 111, 103, 50);
+                }
+            }
+
+            &:nth-child(3) {
+                >p {
+                    border    : 5px solid #756946;
+                    box-shadow: 15px 15px 10px 0px rgba(117, 105, 70, 50);
+                }
+            }
+
+            &:nth-child(4) {
+                >p {
+                    border    : 5px solid #4F5258;
+                    box-shadow: 15px 15px 10px 0px rgba(79, 82, 88, 50);
+                }
+            }
+
+            &:nth-child(5) {
+                >p {
+                    border    : 5px solid #707070;
+                    box-shadow: 15px 15px 10px 0px rgba(0, 220, 255, 50);
+                }
+            }
+        }
+
+        >.video {
+            margin    : auto;
+            margin-top: 100px;
+            width     : 1147px;
+            display   : block;
+        }
+
+        >.bottom-banner {
+            margin-top: 120px;
+            text-align: center;
+        }
     }
 }

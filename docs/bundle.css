@@ -165,7 +165,7 @@ input {
 }
 @font-face {
   font-family: 'DungGeunMo';
-  src: url("../fonts/bankgothic.woff2") format("woff2"), url("../fonts/bankgothic.woff") format("woff");
+  src: url("../fonts/neodgm.woff2") format("woff2"), url("../fonts/neodgm.woff") format("woff");
 }
 body {
   font-family: BankGothic;
@@ -196,6 +196,8 @@ a {
   font-size: 25px;
 }
 #root > footer {
+  margin: auto;
+  margin-top: 100px;
   padding: 53.5px 0;
   width: 1280px;
   border-top: 1px solid #ffffff;
@@ -208,11 +210,90 @@ a {
   position: absolute;
   left: 50px;
   top: 0;
+  z-index: 1;
 }
 #home > header {
   height: 1151px;
   background-image: url(/images/main.png);
   background-repeat: no-repeat;
   background-position: center top;
+  position: relative;
+  margin-bottom: 100px;
+}
+#home > header > .panel {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 40px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.5em;
+  padding-right: 100px;
+}
+#home > section {
+  width: 1200px;
+  margin: auto;
+  padding: 100px 0;
+}
+#home > section > .banner {
+  margin-bottom: 40px;
+  text-align: center;
+}
+#home > section > h2 {
+  font-size: 50px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#home > section p {
+  font-size: 30px;
+  line-height: 1.7em;
+}
+#home > section p a {
+  color: #BFC500;
+}
+#home > section > .loadmap {
+  margin-top: 100px;
+}
+#home > section > .loadmap > h3 {
+  color: #00DCFF;
+  text-shadow: 5px 5px 5px #656565;
+  font-size: 50px;
+  font-family: DungGeunMo;
+}
+#home > section > .loadmap > p {
+  background-color: #121013;
+  height: 195px;
+}
+#home > section > .loadmap:nth-child(odd) > h3 {
+  text-align: right;
+}
+#home > section > .loadmap:nth-child(2) > p {
+  border: 5px solid #4B6F67;
+  box-shadow: 15px 15px 10px 0px #4b6f67;
+}
+#home > section > .loadmap:nth-child(3) > p {
+  border: 5px solid #756946;
+  box-shadow: 15px 15px 10px 0px #756946;
+}
+#home > section > .loadmap:nth-child(4) > p {
+  border: 5px solid #4F5258;
+  box-shadow: 15px 15px 10px 0px #4f5258;
+}
+#home > section > .loadmap:nth-child(5) > p {
+  border: 5px solid #707070;
+  box-shadow: 15px 15px 10px 0px #00dcff;
+}
+#home > section > .video {
+  margin: auto;
+  margin-top: 100px;
+  width: 1147px;
+  display: block;
+}
+#home > section > .bottom-banner {
+  margin-top: 120px;
+  text-align: center;
 }
 
