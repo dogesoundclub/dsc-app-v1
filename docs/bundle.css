@@ -203,6 +203,10 @@ a {
   width: 1280px;
   border-top: 1px solid #ffffff;
   text-align: right;
+  font-family: DungGeunMo;
+}
+#root > footer > a {
+  color: #BFC500;
 }
 #home {
   position: relative;
@@ -214,34 +218,61 @@ a {
   z-index: 1;
 }
 #home > header {
-  height: 1151px;
+  height: 1300px;
   background-image: url(/images/main.png);
   background-repeat: no-repeat;
   background-position: center top;
   position: relative;
   margin-bottom: 100px;
 }
-#home > header > .panel {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 40px;
+#home > header > .welcome {
+  padding-top: 484px;
+  font-family: DungGeunMo;
+  color: #BFC500;
+  text-shadow: 5px 5px 5px #656565;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
+}
+#home > header > .intro {
+  margin-top: 12px;
+  font-size: 30px;
+  font-family: DungGeunMo;
+  text-align: center;
+}
+#home > header > .panel {
+  margin: auto;
+  margin-top: 429px;
+  width: 1159px;
+  height: 229px;
+  background-image: url(/images/top.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  text-align: left;
+  padding: 20px;
+  padding-left: 260px;
+  font-size: 30px;
   line-height: 1.5em;
   padding-right: 100px;
+  font-family: DungGeunMo;
+}
+#home > header > .panel-intro {
+  width: 1000px;
+  margin: auto;
+  font-family: DungGeunMo;
+  color: #BFC500;
+  font-size: 20px;
 }
 #home > section {
-  width: 1200px;
+  width: 1000px;
   margin: auto;
-  padding: 100px 0;
+  padding: 80px 0;
 }
 #home > section > .banner {
   margin-bottom: 40px;
   text-align: center;
 }
 #home > section > h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: DungGeunMo;
   color: #FF00F6;
   text-shadow: 5px 5px 5px #656565;
@@ -249,8 +280,8 @@ a {
   text-align: center;
 }
 #home > section p {
-  font-size: 30px;
-  line-height: 1.7em;
+  font-size: 20px;
+  line-height: 2em;
 }
 #home > section p a {
   color: #BFC500;
@@ -266,7 +297,8 @@ a {
 }
 #home > section > .loadmap > p {
   background-color: #121013;
-  height: 195px;
+  height: 120px;
+  padding: 20px;
 }
 #home > section > .loadmap:nth-child(odd) > h3 {
   text-align: right;
@@ -290,11 +322,7 @@ a {
 #home > section > .video {
   margin: auto;
   margin-top: 100px;
-  width: 1147px;
+  width: 1000px;
   display: block;
-}
-#home > section > .bottom-banner {
-  margin-top: 120px;
-  text-align: center;
 }
 

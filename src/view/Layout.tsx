@@ -11,7 +11,10 @@ export default class Layout extends Component {
                 <a href="/">BOARD</a>
             </header>
             {this.props.children}
-            <footer>© 2021 DSC Labs</footer>
+            <footer>
+                © 2021 DSLAB<br />
+                <a href="/terms">TERMS &#38; CONDITIONS</a>
+            </footer>
         </>;
     }
 }

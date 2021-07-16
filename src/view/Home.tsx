@@ -7,17 +7,20 @@ export default class Home extends Component {
             <main id="home">
                 <img id="logo" src="/images/logo.png" srcSet="/images/logo@2x.png 2x"></img>
                 <header>
+                    <div className="welcome">
+                        도지사운드클럽에 온 것을 환영합니다 !
+                    </div>
+                    <div className="intro">
+                        도지사운드클럽은 개소리(도지사운드)를 즐기는 유쾌한 nft 홀더들을 위한 가상의 나이트클럽입니다.
+                    </div>
                     <div className="panel">
-                        제 2939455 회 개소리 경연 우승작<br />
-                        "비트코인은 인류 최대의 뻘짓입니다."
+                        제 12 회 도지사운드(개소리) 경연 우승작은<br />
+                        '비트코인은 인류 최대의 뻘짓입니다.'가 되었습니다.
+                    </div>
+                    <div className="panel-intro">
+                        * 주의 : 위는 탈중앙화된 방식으로 DSC 홀더들에게 최다 득표를 받은 문구가 자동으로 표시된 것입니다. DSC 개발팀의 뜻과 무관할 수 있습니다.
                     </div>
                 </header>
-                <section>
-                    <h2>도지사운드클럽에 온 것을 환영합니다 !</h2>
-                    <p>
-                        - 도지사운드클럽은 농담(도지사운드), 밈을 즐기는 암호화폐 홀더, 제작자들을 위한 모임입니다.
-                    </p>
-                </section>
                 <section>
                     <h2>도지사운드클럽 특징</h2>
                     <p>
@@ -35,8 +38,8 @@ export default class Home extends Component {
                     <h2>NFT - DOGESOUNDCLUB MATES</h2>
                     <p>
                         - DSC MATES는 컴퓨터 프로그램으로 생성된 10,000개의 24*24 픽셀 아트 캐릭터입니다. NFT(암호화폐의 한 규격)로 발행되어 이들에 대한 소유권을 쉽게 거래할 수 있습니다.<br />
-                        <a href="/">▶ NFT에 대한 자세한 내용보러 가기</a><br />
-                        <a href="/">▶ 이걸로 무엇을 할 수 있나요?</a><br />
+                        <a href="/nft">▶ NFT에 대한 자세한 내용보러 가기</a><br />
+                        <a href="/activities">▶ 이걸로 무엇을 할 수 있나요?</a><br />
                         <br />
                         - 메이트는 오픈씨(세계 최대 NFT 거래소)에서 구입할 수 있습니다.<br />
                         <a href="https://opensea.io/collection/dogesoundclub-mates">▶ OPENSEA로 이동</a><br />
@@ -54,37 +57,50 @@ export default class Home extends Component {
                     <h2>ROADMAP ACTIVATIONS</h2>
                     <div className="loadmap">
                         <h3>30 %</h3>
-                        <p>RELEASE LOFI VIDEO OF DSC</p>
+                        <p>
+                            클럽 활동 '도지사운드 경연'을 활성화합니다.<br />
+                            <a href="/activities">▶ 도지사운드 경연이 뭔가요?</a>
+                        </p>
                     </div>
                     <div className="loadmap">
                         <h3>50 %</h3>
                         <p>
-                            RELEASE CLUB ACTIVITY 'AMONGUS'<br />
-                            <a href="/">▶ WHAT IS 'AMONGUS'</a>
+                            홀더들의 자취를 남길 수 있도록 게시판 '도지보드'를 활성화합니다.
                         </p>
                     </div>
                     <div className="loadmap">
                         <h3>70 %</h3>
-                        <p>RELEASE A BOARD FOR HOLDERS</p>
+                        <p>
+                            개더타운을 이용한 정모를 엽니다.
+                        </p>
                     </div>
                     <div className="loadmap">
                         <h3>100 %</h3>
                         <p>
-                            ISSUE DSC MATES V2 ON ETHEREUM CHAIN.<br />
-                            INTIAL OWNERS WILL BE OWNER OF DSC MATES V1 IN KLAYTN.
+                            이더리움 체인 위에 DSC의 두번째 nft를 올립니다. 두번째 nft의 소유자는 클레이튼 체인의 메이트 홀더들이 됩니다.
                         </p>
                     </div>
                 </section>
                 <section>
                     <h2>Team</h2>
-                    <p>
-                        - arvitor (manager) : dsc till i die.<br />
-                        - hanul (developer)<br />
-                        - yong jin (designer)
-                    </p>
-                    <div className="bottom-banner">
+                    <div className="banner">
                         <img src="/images/team.png" srcSet="/images/team@2x.png 2x" />
                     </div>
+                    <p>
+                        - arvitor (manager) : 쓰레기 수집가입니다. 팀원들이 부끄럼을 타서 소개는 전부 제가 적겠습니다.<br />
+                        - hanul (developer) : 블록체인 프로그래밍 종결자. 이분과 협업을 하게되어 신께 감사를 드립니다.<br />
+                        - yong jin (designer) : 조소과 출신 공무원. 정말 예술가답지 않게 반듯한 친구. 합류해줘 고마워요.
+                    </p>
+                </section>
+                <section>
+                    <h2>CONTACT</h2>
+                    <p>
+                        - 카카오톡 : <a href="https://open.kakao.com/o/gFJzBJ5c">https://open.kakao.com/o/gFJzBJ5c</a><br />
+                        - 트위터 : <a href="https://twitter.com/dogesoundclub">https://twitter.com/dogesoundclub</a><br />
+                        - 인스타그램 : @dogesoundclub<br />
+                        - 유튜브 : <a href="https://www.youtube.com/channel/UCnt1jjJpL-YdHNcooykdY4w">https://www.youtube.com/channel/UCnt1jjJpL-YdHNcooykdY4w</a><br />
+                        - 이메일 : dogesoundclub@gmail.com
+                    </p>
                 </section>
             </main>
             {sessionStorage.__spa_path && <Redirect to={sessionStorage.__spa_path} />}
