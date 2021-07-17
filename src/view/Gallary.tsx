@@ -70,7 +70,7 @@ export default class Gallary extends Component<{}, {
                 dataLength={this.state.data.length / 8}
                 next={this.loadMore}
                 hasMore={this.state.data.length < 10000}
-                loader={<p>Loading...</p>}
+                loader={this.state.data.length === 0 ? <p>Mate not exists.</p> : <p>Loading...</p>}
                 endMessage={<p>Yay! You have seen it all</p>}
             >
                 {this.state.data.map((data, index) => <a key={index} className="mate" style={{
