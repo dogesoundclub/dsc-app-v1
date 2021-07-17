@@ -428,17 +428,7 @@ a {
   bottom: 0;
   font-family: DungGeunMo;
 }
-#gallary .menu-bar input.filter {
-  display: block;
-  width: 100%;
-  height: 50px;
-  color: #ffffff;
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  font-family: BankGothic;
-}
-#gallary .menu-bar select.filter {
+#gallary .menu-bar .filter {
   display: block;
   width: 100%;
   height: 50px;
