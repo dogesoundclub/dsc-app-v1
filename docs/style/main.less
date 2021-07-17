@@ -13,40 +13,8 @@ a {
     text-decoration: inherit;
 }
 
-#root {
-    position: relative;
-
-    >header {
-        position       : absolute;
-        top            : 0;
-        left           : 50%;
-        z-index        : 2;
-        width          : 1280px;
-        margin-left    : -640px;
-        display        : flex;
-        justify-content: center;
-        padding        : 30px 0;
-
-        >a {
-            padding  : 0 50px;
-            color    : #06BC00;
-            font-size: 25px;
-        }
-    }
-
-    >footer {
-        margin     : auto;
-        margin-top : 100px;
-        padding    : 53.5px 0;
-        width      : 1280px;
-        border-top : 1px solid #ffffff;
-        text-align : right;
-        font-family: DungGeunMo;
-
-        >a {
-            color: #BFC500;
-        }
-    }
-}
-
+@import "view/layout.less";
 @import "view/home.less";
+@import "view/mate.less";
+@import "view/gallary.less";
+@import "view/terms.less";

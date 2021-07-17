@@ -38,7 +38,7 @@ export default class Home extends Component {
                     <h2>NFT - DOGESOUNDCLUB MATES</h2>
                     <p>
                         - DSC MATES는 컴퓨터 프로그램으로 생성된 10,000개의 24*24 픽셀 아트 캐릭터입니다. NFT(암호화폐의 한 규격)로 발행되어 이들에 대한 소유권을 쉽게 거래할 수 있습니다.<br />
-                        <a href="/nft">▶ NFT에 대한 자세한 내용보러 가기</a><br />
+                        <a href="/mate">▶ NFT에 대한 자세한 내용보러 가기</a><br />
                         <a href="/activities">▶ 이걸로 무엇을 할 수 있나요?</a><br />
                         <br />
                         - 메이트는 오픈씨(세계 최대 NFT 거래소)에서 구입할 수 있습니다.<br />

@@ -1,0 +1,1 @@
+{"version":3,"file":"Terms.js","sourceRoot":"","sources":["../../src/view/Terms.tsx"],"names":[],"mappings":";;;AAAA,iCAAkC;AAElC,MAAqB,KAAM,SAAQ,iBAAS;IACjC,MAAM;QACT,OAAO,2CAAM,EAAE,EAAC,OAAO,iBACnB,mEAA+B;gBAC/B,2CACI,yEAAa;wBACb,4lCACyP,mCAAM;gCAC3P,mCAAM,yjBAEN,YACE;gBACV,2CACI,mEAAY;wBACZ,2vBACoM,mCAAM;gCACtM,mCAAM,yjBAEN,YACE,aACP,CAAC;IACZ,CAAC;CACJ;AAtBD,wBAsBC"}
