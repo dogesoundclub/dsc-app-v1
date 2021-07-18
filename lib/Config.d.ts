@@ -1,5 +1,9 @@
 declare const _default: {
-    contracts: {};
+    chainId: number;
+    contracts: {
+        Mate: string;
+        Slogan: string;
+    };
 };
 export default _default;
 //# sourceMappingURL=Config.d.ts.map

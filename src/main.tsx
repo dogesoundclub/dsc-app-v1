@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Wallet from "./klaytn/Wallet";
 import Activities from "./view/Activities";
 import Gallary from "./view/Gallary";
 import Home from "./view/Home";
@@ -7,7 +8,7 @@ import Layout from "./view/Layout";
 import Mate from "./view/Mate";
 import Terms from "./view/Terms";
 
-const Caver = require("caver-js");
+Wallet;
 
 ReactDOM.render(
     <Layout>
