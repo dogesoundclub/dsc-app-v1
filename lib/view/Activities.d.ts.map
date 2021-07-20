@@ -1,1 +1,1 @@
-{"version":3,"file":"Activities.d.ts","sourceRoot":"","sources":["../../src/view/Activities.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAIlC,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,SAAS;IACtC,MAAM;CAUhB"}
+{"version":3,"file":"Activities.d.ts","sourceRoot":"","sources":["../../src/view/Activities.tsx"],"names":[],"mappings":"AACA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,SAAS;IACtC,MAAM;CAuChB"}

@@ -450,6 +450,40 @@ a {
   padding: 24px 0;
   text-align: center;
 }
+#activities {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+#activities > h1 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#activities > section {
+  margin-top: 80px;
+}
+#activities > section > h2 {
+  font-size: 30px;
+  color: #BFC500;
+  margin-bottom: 10px;
+}
+#activities > section > h2.ready {
+  color: #6E6E6E;
+}
+#activities > section > h2 > a {
+  color: inherit;
+}
+#activities > section p {
+  font-size: 20px;
+  line-height: 2em;
+}
+#activities > section p a {
+  color: #BFC500;
+}
 #terms {
   width: 1000px;
   padding: 180px 0;
