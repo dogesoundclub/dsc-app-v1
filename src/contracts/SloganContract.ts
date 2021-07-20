@@ -19,6 +19,11 @@ class SloganContract extends Contract {
         return BigNumber.from(contract === undefined ? -1 : await contract.methods.round().call());
     }
 
+    public async getRoundBlock(round: number): Promise<BigNumber> {
+        const contract = await this.loadWalletContract();
+        return BigNumber.from(contract === undefined ? -1 : await contract.methods.roundBlock(round).call());
+    }
+
     public async getPeriod(): Promise<BigNumber> {
         const contract = await this.loadWalletContract();
         return BigNumber.from(contract === undefined ? -1 : await contract.methods.period().call());
@@ -44,10 +49,25 @@ class SloganContract extends Contract {
         return BigNumber.from(contract === undefined ? -1 : await contract.methods.candidateCount(round).call());
     }
 
+    public async getCandidate(round: number, index: number): Promise<string> {
+        const contract = await this.loadWalletContract();
+        return contract === undefined ? "" : await contract.methods.candidate(round, index).call();
+    }
+
+    public async getVotes(round: number, candidate: number): Promise<BigNumber> {
+        const contract = await this.loadWalletContract();
+        return BigNumber.from(contract === undefined ? -1 : await contract.methods.votes(round, candidate).call());
+    }
+
     public async registerCandidate(slogan: string, count: number): Promise<void> {
         const register = await Wallet.loadAddress();
         const contract = await this.loadWalletContract();
         await contract?.methods.registerCandidate(slogan, count).send({ from: register, gas: 1500000 });
+    }
+
+    public async getElected(round: number): Promise<BigNumber> {
+        const contract = await this.loadWalletContract();
+        return BigNumber.from(contract === undefined ? -1 : await contract.methods.elected(round).call());
     }
 }
 

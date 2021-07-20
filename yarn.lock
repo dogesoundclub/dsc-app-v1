@@ -1868,6 +1868,11 @@ skyutil@^0.0.1:
   resolved "https://registry.yarnpkg.com/skyutil/-/skyutil-0.0.1.tgz#fdd8255b2eeac3ee06e3643427e34db0ee42ab8b"
   integrity sha512-rcbUtbwiuOJs9rvZHzVUgV1UBhOa7KxnPEmQapfhzSwUAFM2THLNZuoF/8XMFEuznRqPMeYeABo8TFiFrgBL+w==
 
+skyutil@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/skyutil/-/skyutil-0.0.9.tgz#c1e6d550393ff41c98baea86cc47b92af5004187"
+  integrity sha512-Lqmku9LqDGirQ9o+bYYTfbnVDL4soXtYk6KaMes58YhTtl9O2QXn9csmu6XBvzIWWIAM/haIV7vyY3g+FsD3yQ==
+
 source-list-map@^2.0.0, source-list-map@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
