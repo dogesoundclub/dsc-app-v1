@@ -150,6 +150,25 @@
 			{
 				"name": "r",
 				"type": "uint256"
+			}
+		],
+		"name": "roundBlock",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "r",
+				"type": "uint256"
 			},
 			{
 				"name": "index",

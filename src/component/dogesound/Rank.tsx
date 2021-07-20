@@ -18,10 +18,16 @@ export default class Rank extends Component<RankProps, {
 
     public async componentDidMount() {
         const elected = (await SloganContract.getElected(this.props.round)).toNumber();
+
+        let slogan = "";
+        try {
+            slogan = await SloganContract.getCandidate(this.props.round, elected);
+        } catch (e) {/* ignore. */ }
+
         this.setState({
             block: (await SloganContract.getRoundBlock(this.props.round)).toNumber(),
             votes: (await SloganContract.getVotes(this.props.round, elected)).toNumber(),
-            slogan: await SloganContract.getCandidate(this.props.round, elected),
+            slogan,
         });
     }
 
