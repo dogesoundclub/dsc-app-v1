@@ -15,6 +15,7 @@ declare class SloganContract extends Contract {
     getCandidate(round: number, index: number): Promise<string>;
     getVotes(round: number, candidate: number): Promise<BigNumber>;
     registerCandidate(slogan: string, count: number): Promise<void>;
+    vote(candidate: number, count: number): Promise<void>;
     getElected(round: number): Promise<BigNumber>;
 }
 declare const _default: SloganContract;

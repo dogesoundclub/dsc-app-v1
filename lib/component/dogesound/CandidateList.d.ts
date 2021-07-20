@@ -1,5 +1,9 @@
 import { Component } from "react";
-export default class CandidateList extends Component<{}, {}> {
+export default class CandidateList extends Component<{}, {
+    round: number;
+    candidateCount: number;
+}> {
+    constructor(props: {});
     componentDidMount(): Promise<void>;
     render(): JSX.Element;
 }

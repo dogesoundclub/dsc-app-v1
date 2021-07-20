@@ -1,8 +1,32 @@
 import msg from "msg.js";
 import { Component } from "react";
 import { Redirect } from "react-router-dom";
+import SloganContract from "../contracts/SloganContract";
 
-export default class Home extends Component {
+export default class Home extends Component<{}, {
+    round: number,
+    slogan: string,
+}> {
+
+    constructor(props: {}) {
+        super(props);
+        this.state = { round: -1, slogan: "" };
+    }
+
+    public async componentDidMount() {
+        sessionStorage.removeItem("__spa_path");
+
+        const round = (await SloganContract.getRound()).toNumber() - 1
+        const elected = (await SloganContract.getElected(round)).toNumber();
+
+        let slogan = "";
+        try {
+            slogan = await SloganContract.getCandidate(round, elected);
+        } catch (e) {/* ignore. */ }
+
+        this.setState({ round, slogan });
+    }
+
     public render() {
         return <>
             <main id="home">
@@ -19,8 +43,8 @@ export default class Home extends Component {
                         })}
                     </div>
                     <div className="panel">
-                        {msg({
-                            ko: "제 12 회 도지사운드(개소리) 경연 우승작은\n'비트코인은 인류 최대의 뻘짓입니다.'가 되었습니다.",
+                        {this.state.round >= 0 && msg({
+                            ko: `제 ${this.state.round + 1} 회 도지사운드(개소리) 경연 우승작은\n'${this.state.slogan}'가 되었습니다.`,
                         })}
                     </div>
                     <div className="panel-intro">
@@ -163,9 +187,5 @@ export default class Home extends Component {
             </main>
             {sessionStorage.__spa_path && <Redirect to={sessionStorage.__spa_path} />}
         </>;
-    }
-
-    public componentDidMount() {
-        sessionStorage.removeItem("__spa_path");
     }
 }

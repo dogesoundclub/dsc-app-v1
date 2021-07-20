@@ -1,6 +1,10 @@
 import { Component } from "react";
-export default class Home extends Component {
+export default class Home extends Component<{}, {
+    round: number;
+    slogan: string;
+}> {
+    constructor(props: {});
+    componentDidMount(): Promise<void>;
     render(): JSX.Element;
-    componentDidMount(): void;
 }
 //# sourceMappingURL=Home.d.ts.map

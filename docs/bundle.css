@@ -543,4 +543,20 @@ a {
 #terms > section p a {
   color: #BFC500;
 }
+.rank-list {
+  width: 100%;
+}
+.rank-list thead {
+  color: #BFC500;
+}
+.rank-list thead th {
+  text-align: left;
+  padding-bottom: 40px;
+}
+.rank-list tbody {
+  font-family: DungGeunMo;
+}
+.rank-list tbody td {
+  padding: 5px 0;
+}
 

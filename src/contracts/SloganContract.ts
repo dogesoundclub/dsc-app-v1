@@ -65,6 +65,12 @@ class SloganContract extends Contract {
         await contract?.methods.registerCandidate(slogan, count).send({ from: register, gas: 1500000 });
     }
 
+    public async vote(candidate: number, count: number): Promise<void> {
+        const voter = await Wallet.loadAddress();
+        const contract = await this.loadWalletContract();
+        await contract?.methods.vote(candidate, count).send({ from: voter, gas: 1500000 });
+    }
+
     public async getElected(round: number): Promise<BigNumber> {
         const contract = await this.loadWalletContract();
         return BigNumber.from(contract === undefined ? -1 : await contract.methods.elected(round).call());

@@ -17,13 +17,13 @@ export default class RankList extends Component<{}, {
     }
 
     public render() {
-        return <table>
+        return <table className="rank-list">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>BLOCK #</th>
-                    <th>VOTES</th>
-                    <th>dogesound</th>
+                    <th style={{ width: "10%" }}>#</th>
+                    <th style={{ width: "20%" }}>BLOCK #</th>
+                    <th style={{ width: "15%" }}>VOTES</th>
+                    <th style={{ width: "55%" }}>dogesound</th>
                 </tr>
             </thead>
             <tbody>
