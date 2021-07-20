@@ -484,6 +484,37 @@ a {
 #activities > section p a {
   color: #BFC500;
 }
+#dogesound {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+#dogesound > .top-image {
+  display: block;
+  margin: auto;
+}
+#dogesound > section {
+  margin-top: 80px;
+}
+#dogesound > section > h2 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#dogesound > section p {
+  font-size: 20px;
+  line-height: 2em;
+}
+#dogesound > section p a {
+  color: #BFC500;
+}
+#dogesound > section p .important {
+  color: #DF3737;
+  text-decoration: underline;
+}
 #terms {
   width: 1000px;
   padding: 180px 0;

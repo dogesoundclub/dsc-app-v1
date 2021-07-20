@@ -1,0 +1,1 @@
+//# sourceMappingURL=RegistCandidateButton.d.ts.map
