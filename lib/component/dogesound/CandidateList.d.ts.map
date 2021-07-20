@@ -1,1 +1,1 @@
-{"version":3,"file":"CandidateList.d.ts","sourceRoot":"","sources":["../../../src/component/dogesound/CandidateList.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,SAAS,CAAC,EAAE,EAAE,EAAE,CAAC;IACjD,MAAM;CAGhB"}
+{"version":3,"file":"CandidateList.d.ts","sourceRoot":"","sources":["../../../src/component/dogesound/CandidateList.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAGlC,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,SAAS,CAAC,EAAE,EAAE,EAAE,CAAC;IAE3C,iBAAiB;IAKvB,MAAM;CAGhB"}

@@ -7,6 +7,7 @@ declare class Wallet extends EventContainer {
     private checkConnected;
     loadAddress(): Promise<string | undefined>;
     loadChainId(): Promise<any>;
+    loadBlockNumber(): Promise<any>;
     connected(): Promise<boolean>;
     connect(): Promise<void>;
     createContract(address: string, abi: any): any;

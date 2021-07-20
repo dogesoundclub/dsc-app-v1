@@ -22,8 +22,11 @@ class Wallet extends EventContainer {
     }
 
     public async loadChainId() {
-        const chainId = await this.caver?.rpc.klay.getChainId();
-        return chainId === undefined ? -1 : chainId;
+        return this.caver === undefined ? -1 : await this.caver.klay.getChainId();
+    }
+
+    public async loadBlockNumber() {
+        return this.caver === undefined ? -1 : await this.caver.klay.getBlockNumber();
     }
 
     public async connected() {
@@ -36,7 +39,7 @@ class Wallet extends EventContainer {
     }
 
     public createContract(address: string, abi: any) {
-        return new this.caver?.contract(abi, address);
+        return this.caver === undefined ? undefined : new this.caver.klay.Contract(abi, address);
     }
 }
 
