@@ -3,7 +3,7 @@ import { Component } from "react";
 import SloganContract from "../../contracts/SloganContract";
 
 export default class PeriodTriangle extends Component<{
-    period: number
+    period: number,
 }, {}> {
     public render() {
         return <div className="period-triangle">

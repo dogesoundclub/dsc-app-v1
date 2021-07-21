@@ -25,6 +25,7 @@ export default class RegisterCandidateForm extends Component<{}, {
 
     private register = async () => {
         await SloganContract.registerCandidate(this.state.slogan, this.state.count);
+        setTimeout(() => location.reload(), 1000);
     };
 
     public render() {

@@ -2,6 +2,7 @@ import msg from "msg.js";
 import { Component } from "react";
 import { Redirect } from "react-router-dom";
 import SloganContract from "../contracts/SloganContract";
+import Wallet from "../klaytn/Wallet";
 
 export default class Home extends Component<{}, {
     round: number,
@@ -43,6 +44,11 @@ export default class Home extends Component<{}, {
                         })}
                     </div>
                     <div className="panel">
+                        {Wallet.existsInjectedProvider === undefined && <>
+                            {msg({
+                                ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
+                            })}
+                        </>}
                         {this.state.round >= 0 && <>
                             {msg({
                                 ko: `제 ${this.state.round + 1} 회 도지사운드(개소리) 경연 우승작은`,

@@ -9,8 +9,10 @@ export default class DogeSoundContest extends Component<{}, {
     walletAddress?: string;
     selectedCandidate: number;
 }> {
+    private interval;
     constructor(props: {});
     componentDidMount(): Promise<void>;
+    componentWillUnmount(): void;
     render(): JSX.Element;
 }
 //# sourceMappingURL=DogeSoundContest.d.ts.map

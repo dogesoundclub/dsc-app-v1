@@ -33,7 +33,7 @@ export default class Candidate extends Component<CandidateProps, {
 
     public render() {
         return <>
-            <h6 onClick={this.props.select}>{this.state.slogan}경) 메이트 평균가 20000 클레이 달성 (축</h6>
+            <h6 onClick={this.props.select}>{this.state.slogan}</h6>
             <span>
                 {msg({
                     ko: `득표 수 : ${this.state.votes}`,

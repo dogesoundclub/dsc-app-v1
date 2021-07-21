@@ -6,7 +6,7 @@ export default abstract class Contract extends EventContainer {
 
     protected walletContract: any | undefined;
 
-    constructor(public address: string, private abi: any, eventNames: string[]) {
+    constructor(public address: string, private abi: any) {
         super();
     }
 

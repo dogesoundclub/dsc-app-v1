@@ -5,8 +5,7 @@ import Contract from "./Contract";
 class MateContract extends Contract {
 
     constructor() {
-        super(Config.contracts.Mate, require("./MateContractABI.json"), [
-        ]);
+        super(Config.contracts.Mate, require("./MateContractABI.json"));
     }
 
     public async balanceOf(owner: string): Promise<BigNumber> {

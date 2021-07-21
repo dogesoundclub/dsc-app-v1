@@ -2,6 +2,7 @@ import msg from "msg.js";
 import { Component } from "react";
 import DogeSoundContest from "../../component/dogesound/DogeSoundContest";
 import RankList from "../../component/dogesound/RankList";
+import Wallet from "../../klaytn/Wallet";
 
 export default class DogeSound extends Component {
     public render() {
@@ -31,13 +32,23 @@ export default class DogeSound extends Component {
                 <h2>{msg({
                     ko: "도지사운드 역대 우승작",
                 })}</h2>
-                <RankList />
+                {Wallet.existsInjectedProvider === undefined && <>
+                    {msg({
+                        ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
+                    })}
+                </>}
+                {Wallet.existsInjectedProvider !== undefined && <RankList />}
             </section>
             <section>
                 <h2>{msg({
                     ko: "도지사운드 경연 현황판",
                 })}</h2>
-                <DogeSoundContest />
+                {Wallet.existsInjectedProvider === undefined && <>
+                    {msg({
+                        ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
+                    })}
+                </>}
+                {Wallet.existsInjectedProvider !== undefined && <DogeSoundContest />}
             </section>
             <div className="menu-bar">
                 <h4>Activities</h4>

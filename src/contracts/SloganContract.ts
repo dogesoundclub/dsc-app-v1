@@ -10,8 +10,7 @@ class SloganContract extends Contract {
     public readonly VOTE_PERIOD = 2;
 
     constructor() {
-        super(Config.contracts.Slogan, require("./SloganContractABI.json"), [
-        ]);
+        super(Config.contracts.Slogan, require("./SloganContractABI.json"));
     }
 
     public async getRound(): Promise<BigNumber> {

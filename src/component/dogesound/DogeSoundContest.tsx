@@ -23,6 +23,8 @@ export default class DogeSoundContest extends Component<{}, {
     selectedCandidate: number,
 }> {
 
+    private interval: any | undefined;
+
     constructor(props: {}) {
         super(props);
         this.state = {
@@ -48,6 +50,22 @@ export default class DogeSoundContest extends Component<{}, {
             candidateMateCount: (await SloganContract.getCandidateMateCount()).toNumber(),
             walletAddress: await Wallet.loadAddress(),
         });
+
+        this.interval = setInterval(() => {
+            if (this.state.remains === 1) {
+                location.reload();
+            } else {
+                this.setState({
+                    remains: this.state.remains - 1,
+                });
+            }
+        }, 1000);
+    }
+
+    public componentWillUnmount() {
+        if (this.interval !== undefined) {
+            clearInterval(this.interval);
+        }
     }
 
     public render() {
