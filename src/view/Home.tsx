@@ -44,7 +44,7 @@ export default class Home extends Component<{}, {
                         })}
                     </div>
                     <div className="panel">
-                        {Wallet.existsInjectedProvider === undefined && <>
+                        {Wallet.existsInjectedProvider !== true && <>
                             {msg({
                                 ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
                             })}
