@@ -43,9 +43,14 @@ export default class Home extends Component<{}, {
                         })}
                     </div>
                     <div className="panel">
-                        {this.state.round >= 0 && msg({
-                            ko: `제 ${this.state.round + 1} 회 도지사운드(개소리) 경연 우승작은\n'${this.state.slogan}'가 되었습니다.`,
-                        })}
+                        {this.state.round >= 0 && <>
+                            {msg({
+                                ko: `제 ${this.state.round + 1} 회 도지사운드(개소리) 경연 우승작은`,
+                            })}<br />
+                            {msg({
+                                ko: `'${this.state.slogan}'가 되었습니다.`,
+                            })}
+                        </>}
                     </div>
                     <div className="panel-intro">
                         {msg({

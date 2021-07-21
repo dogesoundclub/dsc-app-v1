@@ -4,39 +4,41 @@ import SloganContract from "../../contracts/SloganContract";
 
 interface CandidateProps {
     round: number,
-    index: number;
+    index: number,
+    select: () => void,
 }
 
 export default class Candidate extends Component<CandidateProps, {
     slogan: string,
+    votes: number,
 }> {
 
     constructor(props: CandidateProps) {
         super(props);
-        this.state = { slogan: "" };
+        this.state = { slogan: "", votes: 0 };
     }
 
     public async componentDidMount() {
-        const elected = (await SloganContract.getElected(this.props.round)).toNumber();
 
         let slogan = "";
         try {
-            slogan = await SloganContract.getCandidate(this.props.round, elected);
+            slogan = await SloganContract.getCandidate(this.props.round, this.props.index);
         } catch (e) {/* ignore. */ }
 
-        this.setState({ slogan });
+        this.setState({
+            slogan,
+            votes: (await SloganContract.getVotes(this.props.round, this.props.index)).toNumber(),
+        });
     }
 
-    private vote = async () => {
-        await SloganContract.vote(this.props.index, 10);
-    };
-
     public render() {
-        return <div>
-            {this.state.slogan}
-            <a className="vote-button" onClick={this.vote}>{msg({
-                ko: "투표하기",
-            })}</a>
-        </div>;
+        return <>
+            <h6 onClick={this.props.select}>{this.state.slogan}경) 메이트 평균가 20000 클레이 달성 (축</h6>
+            <span>
+                {msg({
+                    ko: `득표 수 : ${this.state.votes}`,
+                })}
+            </span>
+        </>;
     }
 }

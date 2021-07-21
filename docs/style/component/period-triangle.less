@@ -1,0 +1,43 @@
+.period-triangle {
+    position: relative;
+    height  : 670px;
+
+    >img {
+        position   : absolute;
+        left       : 50%;
+        margin-left: -150px;
+        top        : 140px;
+    }
+
+    h5 {
+        position   : absolute;
+        font-family: DungGeunMo;
+        font-size  : 30px;
+        width      : 400px;
+        text-align : center;
+
+        &.holiday {
+            left       : 50%;
+            margin-left: calc(-200px + 200px);
+            top        : 420px;
+            transform  : rotate(-60deg);
+        }
+
+        &.register {
+            left       : 50%;
+            margin-left: calc(-200px - 200px);
+            top        : 420px;
+            transform  : rotate(60deg);
+        }
+
+        &.vote {
+            left       : 50%;
+            margin-left: -200px;
+            top        : 80px;
+        }
+
+        &.on {
+            color: #BFC500;
+        }
+    }
+}

@@ -6,6 +6,7 @@ import Wallet from "../../klaytn/Wallet";
 import CandidateList from "./CandidateList";
 import PeriodTriangle from "./PeriodTriangle";
 import RegisterCandidateForm from "./RegisterCandidateForm";
+import VoteButton from "./VoteButton";
 
 export default class DogeSoundContest extends Component<{}, {
 
@@ -18,6 +19,8 @@ export default class DogeSoundContest extends Component<{}, {
     candidateMateCount: number,
 
     walletAddress?: string,
+
+    selectedCandidate: number,
 }> {
 
     constructor(props: {}) {
@@ -27,6 +30,7 @@ export default class DogeSoundContest extends Component<{}, {
             mateBalance: 0,
             votedMateCount: 0,
             candidateMateCount: -1,
+            selectedCandidate: 0,
         };
     }
 
@@ -52,7 +56,10 @@ export default class DogeSoundContest extends Component<{}, {
             {this.state.period === SloganContract.HOLIDAY_PERIOD && <div className="message">
                 <h4>
                     {msg({
-                        ko: `제 ${this.state.round}회 경연 투표가 종료되었습니다.\n다음 단계까지 ${this.state.remains} 블록 남음.`,
+                        ko: `제 ${this.state.round}회 경연 투표가 종료되었습니다.`,
+                    })}<br />
+                    {msg({
+                        ko: `다음 단계까지 ${this.state.remains} 블록 남음.`,
                     })}
                 </h4>
                 <p>
@@ -64,7 +71,10 @@ export default class DogeSoundContest extends Component<{}, {
             {this.state.period === SloganContract.REGISTER_CANDIDATE_PERIOD && <div className="message">
                 <h4>
                     {msg({
-                        ko: `제 ${this.state.round + 1}회 경연 후보를 접수 중입니다.\n다음 단계까지 ${this.state.remains} 블록 남음.`,
+                        ko: `제 ${this.state.round + 1}회 경연 후보를 접수 중입니다.`,
+                    })}<br />
+                    {msg({
+                        ko: `다음 단계까지 ${this.state.remains} 블록 남음.`,
                     })}
                 </h4>
                 <p>
@@ -80,7 +90,10 @@ export default class DogeSoundContest extends Component<{}, {
             {this.state.period === SloganContract.VOTE_PERIOD && <div className="message">
                 <h4>
                     {msg({
-                        ko: `제 ${this.state.round + 1}회 경연 투표가 진행 중 입니다.\n다음 단계까지 ${this.state.remains} 블록 남음.`,
+                        ko: `제 ${this.state.round + 1}회 경연 투표가 진행 중 입니다.`,
+                    })}<br />
+                    {msg({
+                        ko: `다음 단계까지 ${this.state.remains} 블록 남음.`,
                     })}
                 </h4>
                 <p>
@@ -101,8 +114,14 @@ export default class DogeSoundContest extends Component<{}, {
                     })}
                 </p>
             </div>}
-            <RegisterCandidateForm />
-            <CandidateList />
+            {this.state.period === SloganContract.REGISTER_CANDIDATE_PERIOD && <RegisterCandidateForm />}
+            {this.state.period === SloganContract.VOTE_PERIOD && <VoteButton candidate={this.state.selectedCandidate} />}
+            {this.state.period === SloganContract.HOLIDAY_PERIOD && <a className="holiday-vote-button">{msg({
+                ko: "투표하기",
+            })}</a>}
+            <CandidateList period={this.state.period} onSelectCandidate={(candidate) => {
+                this.setState({ selectedCandidate: candidate });
+            }} />
         </div>;
     }
 }

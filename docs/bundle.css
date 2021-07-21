@@ -544,19 +544,198 @@ a {
   color: #BFC500;
 }
 .rank-list {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.rank-list table {
   width: 100%;
 }
-.rank-list thead {
+.rank-list table thead {
   color: #BFC500;
 }
-.rank-list thead th {
+.rank-list table thead th {
   text-align: left;
   padding-bottom: 40px;
 }
-.rank-list tbody {
+.rank-list table tbody {
   font-family: DungGeunMo;
 }
-.rank-list tbody td {
+.rank-list table tbody td {
   padding: 5px 0;
+}
+.doge-sound-contest > .message {
+  width: 760px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+.doge-sound-contest > .message > h4 {
+  font-family: DungGeunMo;
+  color: #BFC500;
+  font-size: 40px;
+  line-height: 1.2em;
+}
+.doge-sound-contest > .message > p {
+  margin-top: 60px;
+  font-family: DungGeunMo;
+}
+.doge-sound-contest > .holiday-vote-button {
+  display: block;
+  text-align: center;
+  width: 180px;
+  padding: 15px 0;
+  margin: auto;
+  color: #000000;
+  font-family: DungGeunMo;
+  background-color: #AFAFAF;
+  font-weight: bold;
+}
+.period-triangle {
+  position: relative;
+  height: 670px;
+}
+.period-triangle > img {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 140px;
+}
+.period-triangle h5 {
+  position: absolute;
+  font-family: DungGeunMo;
+  font-size: 30px;
+  width: 400px;
+  text-align: center;
+}
+.period-triangle h5.holiday {
+  left: 50%;
+  margin-left: calc(-200px + 200px);
+  top: 420px;
+  transform: rotate(-60deg);
+}
+.period-triangle h5.register {
+  left: 50%;
+  margin-left: calc(-200px - 200px);
+  top: 420px;
+  transform: rotate(60deg);
+}
+.period-triangle h5.vote {
+  left: 50%;
+  margin-left: -200px;
+  top: 80px;
+}
+.period-triangle h5.on {
+  color: #BFC500;
+}
+.register-candidate-form > span {
+  display: block;
+  font-family: DungGeunMo;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.register-candidate-form > input.slogan {
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  font-family: DungGeunMo;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 20px;
+}
+.register-candidate-form > .count-form {
+  display: flex;
+  justify-content: center;
+}
+.register-candidate-form > .count-form > input {
+  color: #ffffff;
+  background-color: transparent;
+  font-family: DungGeunMo;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 20px;
+  width: 180px;
+}
+.register-candidate-form > .count-form > span {
+  font-family: DungGeunMo;
+  padding: 22px 30px 0;
+  font-size: 20px;
+}
+.register-candidate-form > .count-form > a {
+  font-size: 30px;
+  color: #000000;
+  background-color: #FBFF72;
+  box-shadow: 10px 10px 0px 0px #BFC500;
+  text-align: center;
+  width: 180px;
+  padding: 15px 0;
+  font-family: DungGeunMo;
+  font-weight: bold;
+}
+.vote-button {
+  display: flex;
+  justify-content: center;
+}
+.vote-button > input {
+  color: #ffffff;
+  background-color: transparent;
+  font-family: DungGeunMo;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 20px;
+  width: 180px;
+}
+.vote-button > span {
+  font-family: DungGeunMo;
+  padding: 22px 30px 0;
+  font-size: 20px;
+}
+.vote-button > a {
+  font-size: 30px;
+  color: #000000;
+  background-color: #FBFF72;
+  box-shadow: 10px 10px 0px 0px #BFC500;
+  text-align: center;
+  width: 180px;
+  padding: 15px 0;
+  font-family: DungGeunMo;
+  font-weight: bold;
+}
+.candidate-list {
+  margin-top: 90px;
+  font-size: 20px;
+}
+.candidate-list > p {
+  width: 760px;
+  margin: auto;
+  font-family: DungGeunMo;
+}
+.candidate-list > ul {
+  margin-top: 60px;
+}
+.candidate-list > ul > li {
+  position: relative;
+  margin-bottom: 30px;
+}
+.candidate-list > ul > li > input {
+  position: absolute;
+  left: -40px;
+  top: 15px;
+  transform: scale(2);
+}
+.candidate-list > ul > li > h6 {
+  font-family: DungGeunMo;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  text-align: center;
+}
+.candidate-list > ul > li > span {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  font-family: DungGeunMo;
 }
 

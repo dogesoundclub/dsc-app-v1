@@ -7,6 +7,7 @@ export default class DogeSoundContest extends Component<{}, {
     votedMateCount: number;
     candidateMateCount: number;
     walletAddress?: string;
+    selectedCandidate: number;
 }> {
     constructor(props: {});
     componentDidMount(): Promise<void>;

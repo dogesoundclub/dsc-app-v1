@@ -11,7 +11,7 @@ export default class RegisterCandidateForm extends Component<{}, {
         super(props);
         this.state = {
             slogan: "",
-            count: 30,
+            count: 0,
         };
     }
 
@@ -28,18 +28,24 @@ export default class RegisterCandidateForm extends Component<{}, {
     };
 
     public render() {
-        return <div>
-            {msg({
-                ko: "도지사운드 후보 :",
-            })}
-            <input value={this.state.slogan} onChange={this.handleSloganChange} />
-            <input value={this.state.count} onChange={this.handleCountChange} />
-            {msg({
-                ko: "개를 이용하여",
-            })}
-            <a className="register-candidate-form" onClick={this.register}>{msg({
-                ko: "제출하기",
-            })}</a>
+        return <div className="register-candidate-form">
+            <span>
+                {msg({
+                    ko: "도지사운드 후보 :",
+                })}
+            </span>
+            <input className="slogan" value={this.state.slogan} onChange={this.handleSloganChange} />
+            <div className="count-form">
+                <input value={this.state.count} onChange={this.handleCountChange} />
+                <span>
+                    {msg({
+                        ko: "개를 이용하여",
+                    })}
+                </span>
+                <a onClick={this.register}>{msg({
+                    ko: "제출하기",
+                })}</a>
+            </div>
         </div>;
     }
 }
