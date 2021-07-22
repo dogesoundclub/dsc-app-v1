@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { ProvidePlugin } = require('webpack');
 
 module.exports = {
     entry: {
@@ -35,16 +34,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.less'],
-        fallback: {
-            url: require.resolve("url/"),
-            os: require.resolve("os-browserify/browser"),
-            http: require.resolve("http-browserify"),
-            https: require.resolve("https-browserify"),
-            stream: require.resolve("stream-browserify"),
-            assert: require.resolve("assert/"),
-            crypto: require.resolve("crypto-browserify"),
-            "fs": false,
-        },
     },
     output: {
         filename: '[name].js',
@@ -53,9 +42,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'bundle.css'
-        }),new ProvidePlugin({
-            Buffer: ['buffer', 'Buffer'],
-            process: 'process/browser',
         }),
     ],
 };

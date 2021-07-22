@@ -49,6 +49,11 @@ export default class Home extends Component<{}, {
                                 ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
                             })}
                         </>}
+                        {this.state.round === -1 && <>
+                            {msg({
+                                ko: "아직 도지사운드(개소리) 경연이 시작되지 않았습니다.",
+                            })}
+                        </>}
                         {this.state.round >= 0 && <>
                             {msg({
                                 ko: `제 ${this.state.round + 1} 회 도지사운드(개소리) 경연 우승작은`,
