@@ -7,6 +7,7 @@
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "@types/react-router-dom": "^5.1.7",
+    "caver-js": "^1.6.3",
     "bowser": "^2.11.0",
     "ethers": "^5.4.1",
     "eventcontainer": "^0.0.4",
@@ -19,12 +20,20 @@
     "skyutil": "^0.0.9"
   },
   "devDependencies": {
+    "assert": "^2.0.0",
+    "crypto-browserify": "^3.12.0",
     "css-loader": "^5.2.1",
     "less-loader": "^8.1.0",
+    "http-browserify": "^1.7.0",
+    "https-browserify": "^1.0.0",
     "mini-css-extract-plugin": "^1.4.1",
+    "os-browserify": "^0.3.0",
+    "process": "0.11.10",
+    "stream-browserify": "^3.0.0",
     "ts-loader": "^8.0.13",
     "tslint": "^6.1.3",
     "typescript": "^4.1.3",
+    "url": "^0.11.0",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1"
   }
