@@ -20,7 +20,10 @@ export default class RegisterCandidateForm extends Component<{}, {
     };
 
     private handleCountChange = (event: ChangeEvent<HTMLInputElement>) => {
-        this.setState({ count: parseInt(event.target.value, 10) });
+        const count = parseInt(event.target.value, 10);
+        if (isNaN(count) !== true) {
+            this.setState({ count });
+        }
     };
 
     private register = async () => {

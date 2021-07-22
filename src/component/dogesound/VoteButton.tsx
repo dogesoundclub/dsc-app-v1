@@ -18,7 +18,10 @@ export default class VoteButton extends Component<VoteButtonProps, {
     }
 
     private handleCountChange = (event: ChangeEvent<HTMLInputElement>) => {
-        this.setState({ count: parseInt(event.target.value, 10) });
+        const count = parseInt(event.target.value, 10);
+        if (isNaN(count) !== true) {
+            this.setState({ count });
+        }
     };
 
     private vote = async () => {
