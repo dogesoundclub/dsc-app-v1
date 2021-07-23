@@ -13,6 +13,18 @@ a {
     text-decoration: inherit;
 }
 
+@media @tablet-and-phone {
+    body {
+        zoom: 0.5;
+    }
+}
+
+@media @phone {
+    body {
+        min-width: auto;
+    }
+}
+
 @import "view/layout.less";
 @import "view/home.less";
 @import "view/mate.less";

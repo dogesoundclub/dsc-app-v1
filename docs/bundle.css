@@ -177,6 +177,16 @@ body {
 a {
   text-decoration: inherit;
 }
+@media only screen and (max-width: 959px) {
+  body {
+    zoom: 0.5;
+  }
+}
+@media only screen and (max-width: 719px) {
+  body {
+    min-width: auto;
+  }
+}
 #root {
   position: relative;
 }
@@ -198,6 +208,11 @@ a {
 }
 #root > header > a.ready {
   color: #6D6D6D;
+}
+@media only screen and (max-width: 719px) {
+  #root > header {
+    width: auto;
+  }
 }
 #root > .language {
   position: absolute;
@@ -250,6 +265,11 @@ a {
 }
 #root > footer > a {
   color: #BFC500;
+}
+@media only screen and (max-width: 719px) {
+  #root > footer {
+    width: auto;
+  }
 }
 #home {
   position: relative;
@@ -310,6 +330,12 @@ a {
   margin: auto;
   padding: 80px 0;
 }
+@media only screen and (max-width: 719px) {
+  #home > section {
+    width: auto;
+    padding: 80px 40px;
+  }
+}
 #home > section > .banner {
   margin-bottom: 40px;
   text-align: center;
@@ -368,10 +394,21 @@ a {
   width: 1000px;
   display: block;
 }
+@media only screen and (max-width: 719px) {
+  #home > section > .video {
+    width: 100%;
+  }
+}
 #mate {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #mate {
+    width: auto;
+    padding: 180px 40px;
+  }
 }
 #mate > h1 {
   font-size: 40px;
@@ -408,6 +445,12 @@ a {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #gallary {
+    width: auto;
+    padding: 180px 40px;
+  }
 }
 #gallary .mate-list:after {
   content: " ";
@@ -462,6 +505,12 @@ a {
   padding: 180px 0;
   margin: auto;
 }
+@media only screen and (max-width: 719px) {
+  #activities {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
 #activities > h1 {
   font-size: 40px;
   font-family: DungGeunMo;
@@ -496,6 +545,12 @@ a {
   padding: 180px 0;
   margin: auto;
 }
+@media only screen and (max-width: 719px) {
+  #dogesound {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
 #dogesound > .top-image {
   display: block;
   margin: auto;
@@ -526,6 +581,12 @@ a {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #terms {
+    width: auto;
+    padding: 180px 40px;
+  }
 }
 #terms > h1 {
   font-size: 40px;
