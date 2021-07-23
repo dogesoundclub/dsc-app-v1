@@ -6,6 +6,10 @@
         left    : 50px;
         top     : 0;
         z-index : 1;
+
+        @media @phone {
+            left: 0px;
+        }
     }
 
     >header {
@@ -16,6 +20,12 @@
         position           : relative;
         margin-bottom      : 100px;
 
+        @media @phone {
+            height         : auto;
+            background-size: 100% auto;
+            padding        : 0 60px;
+        }
+
         >.welcome {
             padding-top: 484px;
             font-family: DungGeunMo;
@@ -23,6 +33,12 @@
             text-shadow: 5px 5px 5px #656565;
             text-align : center;
             font-size  : 50px;
+
+            @media @phone {
+                padding-top: 400px;
+                text-align : left;
+                line-height: 1.5em;
+            }
         }
 
         >.intro {
@@ -30,31 +46,67 @@
             font-size  : 30px;
             font-family: DungGeunMo;
             text-align : center;
+
+            @media @phone {
+                text-align : left;
+                line-height: 1.5em;
+            }
         }
 
-        >.panel {
-            margin             : auto;
-            margin-top         : 429px;
-            width              : 1159px;
-            height             : 229px;
-            background-image   : url(/images/top.png);
-            background-repeat  : no-repeat;
-            background-position: center top;
-            text-align         : left;
-            padding            : 20px;
-            padding-left       : 260px;
-            font-size          : 30px;
-            line-height        : 1.5em;
-            padding-right      : 100px;
-            font-family        : DungGeunMo;
-        }
+        >.slogan {
+            margin    : auto;
+            margin-top: 429px;
+            width     : 1130px;
 
-        >.panel-intro {
-            width      : 1000px;
-            margin     : auto;
-            font-family: DungGeunMo;
-            color      : #BFC500;
-            font-size  : 20px;
+            >img {
+                float: left;
+            }
+
+            >.panel {
+                float           : right;
+                width           : 900px;
+                height          : 200px;
+                text-align      : left;
+                padding         : 20px;
+                font-size       : 30px;
+                line-height     : 1.5em;
+                padding-right   : 100px;
+                font-family     : DungGeunMo;
+                border          : 5px solid #4B6F67;
+                box-shadow      : 15px 15px 10px 0px rgba(75, 111, 103, 50);
+                background-color: #000000;
+            }
+
+            >.panel-intro {
+                clear      : both;
+                width      : 1000px;
+                margin     : auto;
+                padding-top: 40px;
+                font-family: DungGeunMo;
+                color      : #BFC500;
+                font-size  : 20px;
+            }
+
+            @media @phone {
+                margin-top: 80px;
+                width     : auto;
+
+                >img {
+                    float        : none;
+                    margin-left  : 80px;
+                    margin-bottom: -20px;
+                    width        : 150px;
+                }
+
+                >.panel {
+                    float: none;
+                    width: auto;
+                }
+
+                >.panel-intro {
+                    width: auto;
+                }
+            }
         }
     }
 
@@ -71,6 +123,7 @@
         >.banner {
             margin-bottom: 40px;
             text-align   : center;
+            line-height  : 0;
         }
 
         >h2 {
@@ -85,6 +138,11 @@
         p {
             font-size  : 20px;
             line-height: 2em;
+
+            @media @phone {
+                font-size : 30px;
+                word-break: break-all;
+            }
 
             a {
                 color: #BFC500;
@@ -105,6 +163,10 @@
                 background-color: #121013;
                 height          : 120px;
                 padding         : 20px;
+
+                @media @phone {
+                    height: 280px;
+                }
             }
 
             &:nth-child(odd) {
