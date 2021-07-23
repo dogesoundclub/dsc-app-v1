@@ -51,7 +51,7 @@ export default class Home extends Component<{}, {
                                     ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
                                 })}
                             </>}
-                            {this.state.round === -2 && <>
+                            {Wallet.existsInjectedProvider === true && this.state.round === -2 && <>
                                 {msg({
                                     ko: "카이카스에 접속해주시기 바랍니다.",
                                 })}
