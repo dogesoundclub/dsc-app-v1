@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, MouseEvent } from "react";
 import BrowserInfo from "../BrowserInfo";
 
 export default class Layout extends Component<{}, {
@@ -10,13 +10,28 @@ export default class Layout extends Component<{}, {
         this.state = { showingNav: false };
     }
 
-    private clickMenuButtonHandler = () => {
+    private clickMenuButtonHandler = (event: MouseEvent) => {
         this.setState({ showingNav: this.state.showingNav !== true });
+        event.stopPropagation();
     };
+
+    private clickBodyHandler = () => {
+        if (this.state.showingNav === true) {
+            this.setState({ showingNav: false });
+        }
+    };
+
+    public componentDidMount() {
+        document.body.addEventListener("click", this.clickBodyHandler);
+    }
+
+    public componentWillUnmount() {
+        document.body.removeEventListener("click", this.clickBodyHandler);
+    }
 
     public render() {
         return <>
-            <header className={this.state.showingNav === true ? "showing" : "hiding"}>
+            <header className={this.state.showingNav === true ? "showing" : "hiding"} onClick={(e) => e.stopPropagation()}>
                 <a href="/">HOME</a>
                 <a href="/mate">NFT</a>
                 <a href="/gallary">GALLARY</a>

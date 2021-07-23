@@ -7,6 +7,17 @@ import Wallet from "../../klaytn/Wallet";
 export default class DogeSound extends Component {
     public render() {
         return <main id="dogesound">
+            <div className="menu-bar">
+                <h4>Activities</h4>
+                <ul className="menus">
+                    <li className="menu on">
+                        <a href="/activity/dogesound">- Dogesound</a>
+                    </li>
+                    <li className="menu ready">
+                        <a>- Amongus</a>
+                    </li>
+                </ul>
+            </div>
             <img className="top-image" src="/images/dogesound.png" />
             <section>
                 <h2>{msg({
@@ -50,17 +61,6 @@ export default class DogeSound extends Component {
                 </>}
                 {Wallet.existsInjectedProvider === true && <DogeSoundContest />}
             </section>
-            <div className="menu-bar">
-                <h4>Activities</h4>
-                <ul className="menus">
-                    <li className="menu on">
-                        <a href="/activity/dogesound">- Dogesound</a>
-                    </li>
-                    <li className="menu ready">
-                        <a>- Amongus</a>
-                    </li>
-                </ul>
-            </div>
         </main>;
     }
 }

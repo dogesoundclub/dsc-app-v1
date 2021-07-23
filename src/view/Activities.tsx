@@ -4,6 +4,17 @@ import { Component } from "react";
 export default class Activities extends Component {
     public render() {
         return <main id="activities">
+            <div className="menu-bar">
+                <h4>Activities</h4>
+                <ul className="menus">
+                    <li className="menu">
+                        <a href="/activity/dogesound">- Dogesound</a>
+                    </li>
+                    <li className="menu ready">
+                        <a>- Amongus</a>
+                    </li>
+                </ul>
+            </div>
             <h1>ACTIVITIES</h1>
             <section>
                 <p>
@@ -28,17 +39,6 @@ export default class Activities extends Component {
                     })}
                 </p>
             </section>
-            <div className="menu-bar">
-                <h4>Activities</h4>
-                <ul className="menus">
-                    <li className="menu">
-                        <a href="/activity/dogesound">- Dogesound</a>
-                    </li>
-                    <li className="menu ready">
-                        <a>- Amongus</a>
-                    </li>
-                </ul>
-            </div>
         </main>;
     }
 }

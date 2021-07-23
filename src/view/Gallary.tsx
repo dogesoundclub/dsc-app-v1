@@ -65,20 +65,6 @@ export default class Gallary extends Component<{}, {
 
     public render() {
         return <main id="gallary">
-            <InfiniteScroll
-                className="mate-list"
-                dataLength={this.state.data.length / 8}
-                next={this.loadMore}
-                hasMore={this.state.data.length < 10000}
-                loader={this.state.data.length === 0 ? <p>Mate not exists.</p> : <p>Loading...</p>}
-                endMessage={<p>Yay! You have seen it all</p>}
-            >
-                {this.state.data.map((data, index) => <a key={index} className="mate" style={{
-                    backgroundImage: `url(https://storage.googleapis.com/dsc-mate/336/dscMate-${data.id}.png)`,
-                }} href={`https://opensea.io/assets/klaytn/0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae/${data.id}`}>
-                    <span>#{data.id}</span>
-                </a>)}
-            </InfiniteScroll>
             <div className="menu-bar">
                 <h4>Gallery</h4>
                 <ul className="menus">
@@ -112,6 +98,20 @@ export default class Gallary extends Component<{}, {
                     </li>
                 </ul>
             </div>
+            <InfiniteScroll
+                className="mate-list"
+                dataLength={this.state.data.length / 8}
+                next={this.loadMore}
+                hasMore={this.state.data.length < 10000}
+                loader={this.state.data.length === 0 ? <p>Mate not exists.</p> : <p>Loading...</p>}
+                endMessage={<p>Yay! You have seen it all</p>}
+            >
+                {this.state.data.map((data, index) => <a key={index} className="mate" style={{
+                    backgroundImage: `url(https://storage.googleapis.com/dsc-mate/336/dscMate-${data.id}.png)`,
+                }} href={`https://opensea.io/assets/klaytn/0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae/${data.id}`}>
+                    <span>#{data.id}</span>
+                </a>)}
+            </InfiniteScroll>
         </main>;
     }
 }

@@ -5,7 +5,7 @@
         position       : absolute;
         top            : 0;
         left           : 50%;
-        z-index        : 2;
+        z-index        : 3;
         width          : 1280px;
         margin-left    : -640px;
         display        : flex;
@@ -119,6 +119,21 @@
 
                 >a {
                     color: inherit;
+                }
+            }
+        }
+
+        @media @phone {
+            position     : relative;
+            top          : auto;
+            left         : auto;
+            width        : auto;
+            padding      : 0 20px;
+            margin-bottom: 100px;
+
+            >.menus {
+                >.menu {
+                    font-size: 35px;
                 }
             }
         }

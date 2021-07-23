@@ -2,8 +2,16 @@
     max-height: 500px;
     overflow-y: scroll;
 
+    @media @phone {
+        overflow-x: scroll;
+    }
+
     table {
         width: 100%;
+
+        @media @phone {
+            width: 1280px;
+        }
 
         thead {
             color: #BFC500;
