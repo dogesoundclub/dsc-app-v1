@@ -25,8 +25,10 @@ export default class VoteButton extends Component<VoteButtonProps, {
     };
 
     private vote = async () => {
-        await SloganContract.vote(this.props.candidate, this.state.count);
-        setTimeout(() => location.reload(), 1000);
+        if (this.state.count > 0) {
+            await SloganContract.vote(this.props.candidate, this.state.count);
+            setTimeout(() => location.reload(), 1000);
+        }
     };
 
     public render() {

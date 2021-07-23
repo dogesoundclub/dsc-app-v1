@@ -11,7 +11,7 @@ export default class Home extends Component<{}, {
 
     constructor(props: {}) {
         super(props);
-        this.state = { round: -1, slogan: "" };
+        this.state = { round: -2, slogan: "" };
     }
 
     public async componentDidMount() {
@@ -47,6 +47,11 @@ export default class Home extends Component<{}, {
                         {Wallet.existsInjectedProvider !== true && <>
                             {msg({
                                 ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
+                            })}
+                        </>}
+                        {this.state.round === -2 && <>
+                            {msg({
+                                ko: "카이카스에 접속해주시기 바랍니다.",
                             })}
                         </>}
                         {this.state.round === -1 && <>

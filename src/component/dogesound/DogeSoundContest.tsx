@@ -136,7 +136,7 @@ export default class DogeSoundContest extends Component<{}, {
                     })}
                 </p>
             </div>}
-            {this.state.period === SloganContract.REGISTER_CANDIDATE_PERIOD && <RegisterCandidateForm />}
+            {this.state.period === SloganContract.REGISTER_CANDIDATE_PERIOD && <RegisterCandidateForm candidateMateCount={this.state.candidateMateCount} />}
             {this.state.period === SloganContract.VOTE_PERIOD && <VoteButton candidate={this.state.selectedCandidate} />}
             {this.state.period === SloganContract.HOLIDAY_PERIOD && <a className="holiday-vote-button">{msg({
                 ko: "투표하기",

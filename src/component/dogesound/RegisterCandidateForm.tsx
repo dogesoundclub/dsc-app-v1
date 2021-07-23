@@ -2,12 +2,16 @@ import msg from "msg.js";
 import { ChangeEvent, Component } from "react";
 import SloganContract from "../../contracts/SloganContract";
 
-export default class RegisterCandidateForm extends Component<{}, {
+interface RegisterCandidateFormProps {
+    candidateMateCount: number,
+}
+
+export default class RegisterCandidateForm extends Component<RegisterCandidateFormProps, {
     slogan: string,
     count: number,
 }> {
 
-    constructor(props: {}) {
+    constructor(props: RegisterCandidateFormProps) {
         super(props);
         this.state = {
             slogan: "",
@@ -27,8 +31,10 @@ export default class RegisterCandidateForm extends Component<{}, {
     };
 
     private register = async () => {
-        await SloganContract.registerCandidate(this.state.slogan, this.state.count);
-        setTimeout(() => location.reload(), 1000);
+        if (this.state.count >= this.props.candidateMateCount) {
+            await SloganContract.registerCandidate(this.state.slogan, this.state.count);
+            setTimeout(() => location.reload(), 1000);
+        }
     };
 
     public render() {
