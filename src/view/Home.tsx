@@ -159,7 +159,7 @@ export default class Home extends Component<{}, {
                         <h3>70 %</h3>
                         <p>
                             {msg({
-                                ko: "개더타운을 이용한 정모를 엽니다.",
+                                ko: "개더타운을 이용한 정기 정모를 활성화합니다.",
                             })}
                         </p>
                     </div>
@@ -167,7 +167,7 @@ export default class Home extends Component<{}, {
                         <h3>100 %</h3>
                         <p>
                             {msg({
-                                ko: "이더리움 체인 위에 DSC의 두번째 nft를 올립니다. 두번째 nft의 소유자는 클레이튼 체인의 메이트 홀더들이 됩니다.",
+                                ko: "클레이튼 토큰 '믹스'를 발행합니다. 메이트 홀더에게 일정 발행량이 배분됩니다.",
                             })}
                         </p>
                     </div>
