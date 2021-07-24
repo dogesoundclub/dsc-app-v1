@@ -11,7 +11,7 @@ export default class Home extends Component<{}, {
 
     constructor(props: {}) {
         super(props);
-        this.state = { round: -1, slogan: "" };
+        this.state = { round: -2, slogan: "" };
     }
 
     public async componentDidMount() {
@@ -43,25 +43,38 @@ export default class Home extends Component<{}, {
                             ko: "도지사운드클럽은 개소리(도지사운드)를 즐기는 유쾌한 nft 홀더들을 위한 가상의 나이트클럽입니다.",
                         })}
                     </div>
-                    <div className="panel">
-                        {Wallet.existsInjectedProvider !== true && <>
+                    <div className="slogan">
+                        <img src="/images/top.png" srcSet="/images/top@2x.png 2x" />
+                        <div className="panel">
+                            {Wallet.existsInjectedProvider !== true && <>
+                                {msg({
+                                    ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
+                                })}
+                            </>}
+                            {Wallet.existsInjectedProvider === true && this.state.round === -2 && <>
+                                {msg({
+                                    ko: "카이카스에 접속해주시기 바랍니다.",
+                                })}
+                            </>}
+                            {this.state.round === -1 && <>
+                                {msg({
+                                    ko: "아직 도지사운드(개소리) 경연이 시작되지 않았습니다.",
+                                })}
+                            </>}
+                            {this.state.round >= 0 && <>
+                                {msg({
+                                    ko: `제 ${this.state.round + 1} 회 도지사운드(개소리) 경연 우승작은`,
+                                })}<br />
+                                {msg({
+                                    ko: `'${this.state.slogan}'가 되었습니다.`,
+                                })}
+                            </>}
+                        </div>
+                        <div className="panel-intro">
                             {msg({
-                                ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
+                                ko: "* 주의 : 위는 탈중앙화된 방식으로 DSC 홀더들에게 최다 득표를 받은 문구가 자동으로 표시된 것입니다. DSC 개발팀의 뜻과 무관할 수 있습니다.",
                             })}
-                        </>}
-                        {this.state.round >= 0 && <>
-                            {msg({
-                                ko: `제 ${this.state.round + 1} 회 도지사운드(개소리) 경연 우승작은`,
-                            })}<br />
-                            {msg({
-                                ko: `'${this.state.slogan}'가 되었습니다.`,
-                            })}
-                        </>}
-                    </div>
-                    <div className="panel-intro">
-                        {msg({
-                            ko: "* 주의 : 위는 탈중앙화된 방식으로 DSC 홀더들에게 최다 득표를 받은 문구가 자동으로 표시된 것입니다. DSC 개발팀의 뜻과 무관할 수 있습니다.",
-                        })}
+                        </div>
                     </div>
                 </header>
                 <section>
@@ -84,7 +97,8 @@ export default class Home extends Component<{}, {
                 </section>
                 <section>
                     <div className="banner">
-                        <img src="/images/stamps.png" srcSet="/images/stamps@2x.png 2x" />
+                        <img src="/images/stamps1.png" srcSet="/images/stamps1@2x.png 2x" />
+                        <img src="/images/stamps2.png" srcSet="/images/stamps2@2x.png 2x" />
                     </div>
                     <h2>NFT - DOGESOUNDCLUB MATES</h2>
                     <p>

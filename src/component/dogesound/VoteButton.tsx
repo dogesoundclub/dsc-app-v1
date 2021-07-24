@@ -18,12 +18,17 @@ export default class VoteButton extends Component<VoteButtonProps, {
     }
 
     private handleCountChange = (event: ChangeEvent<HTMLInputElement>) => {
-        this.setState({ count: parseInt(event.target.value, 10) });
+        const count = parseInt(event.target.value, 10);
+        if (isNaN(count) !== true) {
+            this.setState({ count });
+        }
     };
 
     private vote = async () => {
-        await SloganContract.vote(this.props.candidate, this.state.count);
-        setTimeout(() => location.reload(), 1000);
+        if (this.state.count > 0) {
+            await SloganContract.vote(this.props.candidate, this.state.count);
+            setTimeout(() => location.reload(), 1000);
+        }
     };
 
     public render() {

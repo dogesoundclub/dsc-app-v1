@@ -101,6 +101,10 @@ export default class DogeSoundContest extends Component<{}, {
                     })}{this.state.walletAddress}
                     <br />
                     {msg({
+                        ko: `- 보유 중인 메이트 수 : ${this.state.mateBalance}개`,
+                    })}
+                    <br />
+                    {msg({
                         ko: `- 사용할 수 있는 메이트 수 : ${this.state.mateBalance - this.state.votedMateCount} 개 (>= ${this.state.candidateMateCount}개일 경우 사용 가능)`,
                     })}
                 </p>
@@ -132,7 +136,7 @@ export default class DogeSoundContest extends Component<{}, {
                     })}
                 </p>
             </div>}
-            {this.state.period === SloganContract.REGISTER_CANDIDATE_PERIOD && <RegisterCandidateForm />}
+            {this.state.period === SloganContract.REGISTER_CANDIDATE_PERIOD && <RegisterCandidateForm candidateMateCount={this.state.candidateMateCount} />}
             {this.state.period === SloganContract.VOTE_PERIOD && <VoteButton candidate={this.state.selectedCandidate} />}
             {this.state.period === SloganContract.HOLIDAY_PERIOD && <a className="holiday-vote-button">{msg({
                 ko: "투표하기",

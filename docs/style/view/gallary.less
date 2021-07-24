@@ -3,12 +3,22 @@
     padding: 180px 0;
     margin : auto;
 
+    @media @phone {
+        width  : auto;
+        padding: 180px 40px;
+    }
+
     .mate-list {
         .float-wrapper();
 
         >p {
             margin-top: 20px;
             text-align: center;
+
+            @media @phone {
+                font-size : 30px;
+                word-break: break-all;
+            }
         }
 
         >.mate {

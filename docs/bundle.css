@@ -177,16 +177,25 @@ body {
 a {
   text-decoration: inherit;
 }
+@media only screen and (max-width: 959px) {
+  body {
+    zoom: 0.5;
+  }
+}
+@media only screen and (max-width: 719px) {
+  body {
+    min-width: auto;
+  }
+}
 #root {
   position: relative;
 }
 #root > header {
   position: absolute;
   top: 0;
-  left: 50%;
-  z-index: 2;
-  width: 1280px;
-  margin-left: -640px;
+  left: 0;
+  z-index: 3;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 30px 0;
@@ -199,7 +208,31 @@ a {
 #root > header > a.ready {
   color: #6D6D6D;
 }
-#root > .language {
+@media only screen and (max-width: 719px) {
+  #root > header {
+    width: 280px;
+    padding: 10px;
+    top: 104px;
+    left: auto;
+    right: 40px;
+    margin-left: 0;
+    background-color: #000000;
+    border: 1px solid #A1A1A1;
+    display: block;
+  }
+  #root > header > a {
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+  }
+  #root > header.showing {
+    display: block;
+  }
+  #root > header.hiding {
+    display: none;
+  }
+}
+#root > header > .language {
   position: absolute;
   top: 30px;
   right: 60px;
@@ -208,12 +241,37 @@ a {
   font-family: DungGeunMo;
   font-size: 25px;
 }
-#root > .language > select {
+#root > header > .language > select {
   color: #BFC500;
   font-family: DungGeunMo;
   background-color: #000000;
   border: none;
   font-size: 25px;
+}
+@media only screen and (max-width: 719px) {
+  #root > header > .language {
+    padding: 10px 0;
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+}
+#root .menu-button {
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 12px;
+  z-index: 2;
+  padding: 10px;
+  zoom: 2;
+}
+#root .menu-button img {
+  display: block;
+}
+@media only screen and (max-width: 719px) {
+  #root .menu-button {
+    display: block;
+  }
 }
 #root .menu-bar {
   position: absolute;
@@ -239,6 +297,19 @@ a {
 #root .menu-bar > .menus > .menu > a {
   color: inherit;
 }
+@media only screen and (max-width: 719px) {
+  #root .menu-bar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    padding: 0 20px;
+    margin-bottom: 100px;
+  }
+  #root .menu-bar > .menus > .menu {
+    font-size: 35px;
+  }
+}
 #root > footer {
   margin: auto;
   margin-top: 100px;
@@ -251,6 +322,11 @@ a {
 #root > footer > a {
   color: #BFC500;
 }
+@media only screen and (max-width: 719px) {
+  #root > footer {
+    width: 80%;
+  }
+}
 #home {
   position: relative;
 }
@@ -260,6 +336,11 @@ a {
   top: 0;
   z-index: 1;
 }
+@media only screen and (max-width: 719px) {
+  #home #logo {
+    left: 0px;
+  }
+}
 #home > header {
   height: 1300px;
   background-image: url(/images/main.png);
@@ -267,6 +348,13 @@ a {
   background-position: center top;
   position: relative;
   margin-bottom: 100px;
+}
+@media only screen and (max-width: 719px) {
+  #home > header {
+    height: auto;
+    background-size: 100% auto;
+    padding: 0 60px;
+  }
 }
 #home > header > .welcome {
   padding-top: 484px;
@@ -276,43 +364,90 @@ a {
   text-align: center;
   font-size: 50px;
 }
+@media only screen and (max-width: 719px) {
+  #home > header > .welcome {
+    padding-top: 400px;
+    text-align: left;
+    line-height: 1.5em;
+  }
+}
 #home > header > .intro {
   margin-top: 12px;
   font-size: 30px;
   font-family: DungGeunMo;
   text-align: center;
 }
-#home > header > .panel {
+@media only screen and (max-width: 719px) {
+  #home > header > .intro {
+    text-align: left;
+    line-height: 1.5em;
+  }
+}
+#home > header > .slogan {
   margin: auto;
   margin-top: 429px;
-  width: 1159px;
-  height: 229px;
-  background-image: url(/images/top.png);
-  background-repeat: no-repeat;
-  background-position: center top;
+  width: 1130px;
+}
+#home > header > .slogan > img {
+  float: left;
+}
+#home > header > .slogan > .panel {
+  float: right;
+  width: 900px;
+  height: 200px;
   text-align: left;
   padding: 20px;
-  padding-left: 260px;
   font-size: 30px;
   line-height: 1.5em;
   padding-right: 100px;
   font-family: DungGeunMo;
+  border: 5px solid #4B6F67;
+  box-shadow: 15px 15px 10px 0px #4b6f67;
+  background-color: #000000;
 }
-#home > header > .panel-intro {
+#home > header > .slogan > .panel-intro {
+  clear: both;
   width: 1000px;
   margin: auto;
+  padding-top: 40px;
   font-family: DungGeunMo;
   color: #BFC500;
   font-size: 20px;
+}
+@media only screen and (max-width: 719px) {
+  #home > header > .slogan {
+    margin-top: 80px;
+    width: auto;
+  }
+  #home > header > .slogan > img {
+    float: none;
+    margin-left: 80px;
+    margin-bottom: -20px;
+    width: 150px;
+  }
+  #home > header > .slogan > .panel {
+    float: none;
+    width: auto;
+  }
+  #home > header > .slogan > .panel-intro {
+    width: auto;
+  }
 }
 #home > section {
   width: 1000px;
   margin: auto;
   padding: 80px 0;
 }
+@media only screen and (max-width: 719px) {
+  #home > section {
+    width: auto;
+    padding: 80px 40px;
+  }
+}
 #home > section > .banner {
   margin-bottom: 40px;
   text-align: center;
+  line-height: 0;
 }
 #home > section > h2 {
   font-size: 40px;
@@ -325,6 +460,12 @@ a {
 #home > section p {
   font-size: 20px;
   line-height: 2em;
+}
+@media only screen and (max-width: 719px) {
+  #home > section p {
+    font-size: 30px;
+    word-break: break-all;
+  }
 }
 #home > section p a {
   color: #BFC500;
@@ -342,6 +483,11 @@ a {
   background-color: #121013;
   height: 120px;
   padding: 20px;
+}
+@media only screen and (max-width: 719px) {
+  #home > section > .loadmap > p {
+    height: 280px;
+  }
 }
 #home > section > .loadmap:nth-child(odd) > h3 {
   text-align: right;
@@ -368,10 +514,21 @@ a {
   width: 1000px;
   display: block;
 }
+@media only screen and (max-width: 719px) {
+  #home > section > .video {
+    width: 100%;
+  }
+}
 #mate {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #mate {
+    width: auto;
+    padding: 180px 40px;
+  }
 }
 #mate > h1 {
   font-size: 40px;
@@ -393,6 +550,12 @@ a {
   font-size: 20px;
   line-height: 2em;
 }
+@media only screen and (max-width: 719px) {
+  #mate > section p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
 #mate > section p a {
   color: #BFC500;
 }
@@ -404,10 +567,21 @@ a {
   text-align: center;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 719px) {
+  #mate > section.mates > .all > img {
+    width: 100%;
+  }
+}
 #gallary {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #gallary {
+    width: auto;
+    padding: 180px 40px;
+  }
 }
 #gallary .mate-list:after {
   content: " ";
@@ -420,6 +594,12 @@ a {
 #gallary .mate-list > p {
   margin-top: 20px;
   text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  #gallary .mate-list > p {
+    font-size: 30px;
+    word-break: break-all;
+  }
 }
 #gallary .mate-list > .mate {
   float: left;
@@ -462,6 +642,12 @@ a {
   padding: 180px 0;
   margin: auto;
 }
+@media only screen and (max-width: 719px) {
+  #activities {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
 #activities > h1 {
   font-size: 40px;
   font-family: DungGeunMo;
@@ -488,6 +674,12 @@ a {
   font-size: 20px;
   line-height: 2em;
 }
+@media only screen and (max-width: 719px) {
+  #activities > section p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
 #activities > section p a {
   color: #BFC500;
 }
@@ -495,6 +687,12 @@ a {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #dogesound {
+    width: auto;
+    padding: 180px 40px;
+  }
 }
 #dogesound > .top-image {
   display: block;
@@ -515,6 +713,12 @@ a {
   font-size: 20px;
   line-height: 2em;
 }
+@media only screen and (max-width: 719px) {
+  #dogesound > section p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
 #dogesound > section p a {
   color: #BFC500;
 }
@@ -526,6 +730,12 @@ a {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #terms {
+    width: auto;
+    padding: 180px 40px;
+  }
 }
 #terms > h1 {
   font-size: 40px;
@@ -547,6 +757,12 @@ a {
   font-size: 20px;
   line-height: 2em;
 }
+@media only screen and (max-width: 719px) {
+  #terms > section p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
 #terms > section p a {
   color: #BFC500;
 }
@@ -554,8 +770,18 @@ a {
   max-height: 500px;
   overflow-y: scroll;
 }
+@media only screen and (max-width: 719px) {
+  .rank-list {
+    overflow-x: scroll;
+  }
+}
 .rank-list table {
   width: 100%;
+}
+@media only screen and (max-width: 719px) {
+  .rank-list table {
+    width: 1280px;
+  }
 }
 .rank-list table thead {
   color: #BFC500;
@@ -575,6 +801,11 @@ a {
   margin: auto;
   margin-bottom: 60px;
 }
+@media only screen and (max-width: 719px) {
+  .doge-sound-contest > .message {
+    width: auto;
+  }
+}
 .doge-sound-contest > .message > h4 {
   font-family: DungGeunMo;
   color: #BFC500;
@@ -584,6 +815,11 @@ a {
 .doge-sound-contest > .message > p {
   margin-top: 60px;
   font-family: DungGeunMo;
+}
+@media only screen and (max-width: 719px) {
+  .doge-sound-contest > .message > p {
+    word-break: break-all;
+  }
 }
 .doge-sound-contest > .holiday-vote-button {
   display: block;
@@ -639,6 +875,11 @@ a {
   font-size: 20px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 719px) {
+  .register-candidate-form > span {
+    font-size: 30px;
+  }
+}
 .register-candidate-form > input.slogan {
   display: block;
   margin-bottom: 30px;
@@ -651,11 +892,22 @@ a {
   text-align: center;
   font-size: 20px;
 }
+@media only screen and (max-width: 719px) {
+  .register-candidate-form > input.slogan {
+    font-size: 30px;
+  }
+}
 .register-candidate-form > .count-form {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 719px) {
+  .register-candidate-form > .count-form {
+    display: block;
+  }
+}
 .register-candidate-form > .count-form > input {
+  display: block;
   color: #ffffff;
   background-color: transparent;
   font-family: DungGeunMo;
@@ -665,12 +917,30 @@ a {
   font-size: 20px;
   width: 180px;
 }
+@media only screen and (max-width: 719px) {
+  .register-candidate-form > .count-form > input {
+    font-size: 30px;
+    width: 220px;
+    margin: auto;
+  }
+}
 .register-candidate-form > .count-form > span {
+  display: block;
   font-family: DungGeunMo;
   padding: 22px 30px 0;
   font-size: 20px;
 }
+@media only screen and (max-width: 719px) {
+  .register-candidate-form > .count-form > span {
+    font-size: 30px;
+    width: 220px;
+    padding: 30px 0;
+    text-align: center;
+    margin: auto;
+  }
+}
 .register-candidate-form > .count-form > a {
+  display: block;
   font-size: 30px;
   color: #000000;
   background-color: #FBFF72;
@@ -680,12 +950,24 @@ a {
   padding: 15px 0;
   font-family: DungGeunMo;
   font-weight: bold;
+}
+@media only screen and (max-width: 719px) {
+  .register-candidate-form > .count-form > a {
+    width: 220px;
+    margin: auto;
+  }
 }
 .vote-button {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 719px) {
+  .vote-button {
+    display: block;
+  }
+}
 .vote-button > input {
+  display: block;
   color: #ffffff;
   background-color: transparent;
   font-family: DungGeunMo;
@@ -695,12 +977,30 @@ a {
   font-size: 20px;
   width: 180px;
 }
+@media only screen and (max-width: 719px) {
+  .vote-button > input {
+    font-size: 30px;
+    width: 220px;
+    margin: auto;
+  }
+}
 .vote-button > span {
+  display: block;
   font-family: DungGeunMo;
   padding: 22px 30px 0;
   font-size: 20px;
 }
+@media only screen and (max-width: 719px) {
+  .vote-button > span {
+    font-size: 30px;
+    width: 220px;
+    padding: 30px 0;
+    text-align: center;
+    margin: auto;
+  }
+}
 .vote-button > a {
+  display: block;
   font-size: 30px;
   color: #000000;
   background-color: #FBFF72;
@@ -711,14 +1011,30 @@ a {
   font-family: DungGeunMo;
   font-weight: bold;
 }
+@media only screen and (max-width: 719px) {
+  .vote-button > a {
+    width: 220px;
+    margin: auto;
+  }
+}
 .candidate-list {
   margin-top: 90px;
   font-size: 20px;
+}
+@media only screen and (max-width: 719px) {
+  .candidate-list {
+    font-size: 30px;
+  }
 }
 .candidate-list > p {
   width: 760px;
   margin: auto;
   font-family: DungGeunMo;
+}
+@media only screen and (max-width: 719px) {
+  .candidate-list > p {
+    width: auto;
+  }
 }
 .candidate-list > ul {
   margin-top: 60px;

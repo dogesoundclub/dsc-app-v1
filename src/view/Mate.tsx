@@ -4,6 +4,17 @@ import { Component } from "react";
 export default class Mate extends Component {
     public render() {
         return <main id="mate">
+            <div className="menu-bar">
+                <h4>NFT</h4>
+                <ul className="menus">
+                    <li className="menu on">
+                        <a href="mate">- DSC Mates</a>
+                    </li>
+                    <li className="menu ready">
+                        <a>- DSC eXCLUSIVES</a>
+                    </li>
+                </ul>
+            </div>
             <h1>{msg({
                 ko: "DSC MATES가 무엇인가요?",
             })}</h1>
@@ -67,17 +78,6 @@ export default class Mate extends Component {
                     <a href="https://ipfs.io/ipfs/QmfTimyAQTQjQsnvECn9U44LdnPzSDF2XREoP2WFdjHitQ?filename=dscMates.png" target="_blank">https://ipfs.io/ipfs/QmfTimyAQTQjQsnvECn9U44LdnPzSDF2XREoP2WFdjHitQ?filename=dscMates.png</a> 에 접속하면, 분산 저장된 dsc mates 정본을 열람할 수 있습니다.
                 </p>
             </section>
-            <div className="menu-bar">
-                <h4>NFT</h4>
-                <ul className="menus">
-                    <li className="menu on">
-                        <a href="mate">- DSC Mates</a>
-                    </li>
-                    <li className="menu ready">
-                        <a>- DSC eXCLUSIVES</a>
-                    </li>
-                </ul>
-            </div>
         </main>;
     }
 }

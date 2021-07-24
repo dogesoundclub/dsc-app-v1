@@ -4,6 +4,10 @@
         font-family  : DungGeunMo;
         font-size    : 20px;
         margin-bottom: 20px;
+
+        @media @phone {
+            font-size: 30px;
+        }
     }
 
     >input.slogan {
@@ -17,13 +21,22 @@
         border          : 2px solid #ffffff;
         text-align      : center;
         font-size       : 20px;
+
+        @media @phone {
+            font-size: 30px;
+        }
     }
 
     >.count-form {
         display        : flex;
         justify-content: center;
 
+        @media @phone {
+            display: block;
+        }
+
         >input {
+            display         : block;
             color           : #ffffff;
             background-color: transparent;
             font-family     : DungGeunMo;
@@ -32,15 +45,31 @@
             text-align      : center;
             font-size       : 20px;
             width           : 180px;
+
+            @media @phone {
+                font-size: 30px;
+                width    : 220px;
+                margin   : auto;
+            }
         }
 
         >span {
+            display    : block;
             font-family: DungGeunMo;
             padding    : 22px 30px 0;
             font-size  : 20px;
+
+            @media @phone {
+                font-size : 30px;
+                width     : 220px;
+                padding   : 30px 0;
+                text-align: center;
+                margin    : auto;
+            }
         }
 
         >a {
+            display         : block;
             font-size       : 30px;
             color           : #000000;
             background-color: #FBFF72;
@@ -50,6 +79,11 @@
             padding         : 15px 0;
             font-family     : DungGeunMo;
             font-weight     : bold;
+
+            @media @phone {
+                width : 220px;
+                margin: auto;
+            }
         }
     }
 }
