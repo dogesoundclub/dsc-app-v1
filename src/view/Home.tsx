@@ -179,13 +179,13 @@ export default class Home extends Component<{}, {
                     </div>
                     <p>
                         {msg({
-                            ko: "- arvitor (manager) : 쓰레기 수집가입니다. 팀원들이 부끄럼을 타서 소개는 전부 제가 적겠습니다.",
+                            ko: "- arvitor (manager) : 메이트와 같이 오래두고 보았을 때 정이 가는 NFT를 좋아합니다. 그림을 조합하는 프로그램을 만들고 영업을 하고 있습니다. 팀원들이 부끄럼을 타서 소개는 전부 제가 적겠습니다.",
                         })}<br />
                         {msg({
                             ko: "- hanul (developer) : 블록체인 프로그래밍 종결자. 이분과 협업을 하게되어 신께 감사를 드립니다.",
                         })}<br />
                         {msg({
-                            ko: "- yong jin (designer) : 조소과 출신 공무원. 정말 예술가답지 않게 반듯한 친구. 합류해줘 고마워요.",
+                            ko: "- yong jin (designer) : 메이트와 일러스트를 그려 주었습니다. 합류해주어 고맙습니다!",
                         })}
                     </p>
                 </section>
