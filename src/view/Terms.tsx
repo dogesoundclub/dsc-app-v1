@@ -4,7 +4,7 @@ import { Component } from "react";
 export default class Terms extends Component {
     public render() {
         return <main id="terms">
-            <h1>TERMS &#38; CONDITIONS</h1>
+            <h1>TERMS &#38; CONDITIONS OF DSC MATES</h1>
             <section>
                 <h2>{msg({
                     ko: "이용약관",
@@ -21,7 +21,7 @@ export default class Terms extends Component {
             </section>
             <section>
                 <h2>{msg({
-                    ko: "소유권",
+                    ko: "소유권 및 저작권",
                 })}</h2>
                 <p>
                     {msg({
@@ -29,7 +29,7 @@ export default class Terms extends Component {
                     })}<br />
                     <br />
                     {msg({
-                        ko: "둘째, (2차 창작물의 허용) 당신이 nft를 소유하는 것은 저작권의 소유를 의미하지 않습니다. DSLAB은 DOGESOUND MATES에 MIT 라이센스를 부여함으로써 2차 창작물을 제작하여, 개인 또는 상업적인 활용에 대한 가능성을 모두 열어두었습니다.",
+                        ko: "둘째, (저작권) DOGESOUND MATES는 MIT 라이센스로 배포되었습니다. 따라서, DSLAB 이 외의 제 3자가 MATES 아트를 개인 또는 상업적으로 활용할 수 있습니다.",
                     })}
                 </p>
             </section>
