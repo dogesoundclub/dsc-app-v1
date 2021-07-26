@@ -41,8 +41,8 @@ export default class Home extends Component<{}, {
                     </div>
                     <div className="intro">
                         {msg({
-                            ko: "도지사운드클럽은 NFT에 기반한 거버넌스가 수행되는 NFT 수집가들의 모임입니다.",
-                            en: "Doge Sound Club is a gathering of NFT collectors where NFT-based governance is carried out."
+                            ko: "도지사운드클럽은 NFT에 기반한 거버넌스가 수행되는 NFT 수집가들의 사교 모임입니다.",
+                            en: "Doge Sound Club is a social gathering of NFT collectors where NFT-based governance is carried out."
                         })}
                         <br /><br />
                         {msg({
@@ -209,16 +209,16 @@ export default class Home extends Component<{}, {
                     </div>
                     <p>
                         {msg({
-                            ko: "- ARVITOR (Manager) : 그림을 조합하는 프로그램을 만들고 영업을 하고 있습니다. 팀원들을 소개하겠습니다.",
-                            en: "- ARVITOR (Manager) : Made program that combines pictures and marketing. I will introduce my team mates."
+                            ko: "- ARVITOR (Manager) : 그림을 조합하는 프로그램을 만들었습니다. 슈퍼 컬렉터가 되고 싶습니다.",
+                            en: "- ARVITOR (Manager) : I made program that combines pictures. I wanna be a super collector."
                         })}<br />
                         {msg({
-                            ko: "- HANUL (Dev) : 블록체인 프로그래밍 종결자. 이분과 협업을 하게되어 신께 감사를 드립니다.",
-                            en: "- HANUL (Dev) : Blockchain programming terminator. I thank God for collaborating with him."
+                            ko: "- HANUL (Dev) : 블록체인 프로그래밍 종결자.",
+                            en: "- HANUL (Dev) : Virtuoso in blockchain programming."
                         })}<br />
                         {msg({
-                            ko: "- YONG JIN (Artist) : 메이트와 일러스트를 그려 주었습니다. 합류해주어 고맙습니다!",
-                            en: "- YONG JIN (Artist) : Drew illustrations and mates. Thanks for joining!"
+                            ko: "- YONG JIN (Artist) : 메이트와 일러스트를 그려 주었습니다.",
+                            en: "- YONG JIN (Artist) : Drew illustrations and mates."
                         })}
                     </p>
                 </section>
