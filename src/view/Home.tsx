@@ -46,7 +46,7 @@ export default class Home extends Component<{}, {
                         })}
                         <br /><br />
                         {msg({
-                            ko: "MATES를 구입을 통해 클럽에 가입하고 투표할 수 있습니다.",
+                            ko: "MATES를 이용해서 클럽에 가입하고 투표할 수 있습니다.",
                             en: "You can join the club and vote by NFT MATES."
                         })}
                     </div>

@@ -8,28 +8,34 @@ export default class Terms extends Component {
             <section>
                 <h2>{msg({
                     ko: "이용약관",
+                    en: "TERMS OF SERVICE"
                 })}</h2>
                 <p>
                     {msg({
-                        ko: "dsc mates은 클레이튼 네트워크에서 실행되는 디지털 아트워크(NFT) 모음입니다. 이 웹사이트는 참가자들이 디지털 수집품을 교환/이용할 수 있는 인터페이스일 뿐입니다. 사용자는 자신의 개인 클레이튼 지갑의 안전과 관리에 대해 전적으로 책임이 있으며 승인 전에 이 웹사이트에서 생성된 모든 거래 및 계약을 검증합니다. 또한 dsc mates 스마트 계약은 클레이튼 네트워크에서 실행되기 때문에 트랜잭션을 취소 또는 복원할 수 없습니다.",
+                        ko: "DSC MATES은 클레이튼 네트워크에서 실행되는 디지털 아트워크(NFT) 모음입니다. 이 웹사이트는 참가자들이 디지털 수집품을 교환/이용할 수 있는 인터페이스일 뿐입니다. 사용자는 자신의 개인 클레이튼 지갑의 안전과 관리에 대해 전적으로 책임이 있으며 승인 전에 이 웹사이트에서 생성된 모든 거래 및 계약을 검증합니다. 또한 DSC MATES 스마트 계약은 클레이튼 네트워크에서 실행되기 때문에 트랜잭션을 취소 또는 복원할 수 없습니다.",
+                        en: "DSC MATES is a collection of digital artworks (NFTs) running on the Klaytn network. This website is merely an interface through which participants can exchange/use digital collectibles. Users are solely responsible for the safety and management of their personal Klaytn wallet and verify all transactions and contracts created on this website prior to approval. Also, since the DSC MATES smart contract runs on the Klaytn network, transactions cannot be canceled or restored."
                     })}<br />
                     <br />
                     {msg({
                         ko: "이 웹사이트 및 연결된 서비스는 어떠한 종류의 보증 없이 \"있는 그대로\" 및 \"사용 가능한 상태로\" 제공됩니다. 이 웹사이트를 사용함으로써 귀하는 dsc mates 디지털 수집품과 관련된 모든 거래에 대해 단독 책임을 지게 됩니다.",
+                        en: "This website and linked services are provided \"as is\" and \"as available\" without warranty of any kind. By using this website, you are solely responsible for all transactions related to the dsc mates digital collectibles."
                     })}
                 </p>
             </section>
             <section>
                 <h2>{msg({
                     ko: "소유권 및 저작권",
+                    en: "OWNERSHIP AND LICENSE"
                 })}</h2>
                 <p>
                     {msg({
                         ko: "첫째, (소유권) 당신은 NFT를 소유하고 있습니다. 각 DSC MATE는 클레이튼 블록체인의 NFT입니다. NFT를 구매하면 기본 DSC MATE, Art를 완전히 소유하게 됩니다. NFT의 소유권은 전적으로 스마트 계약과 클레이튼 네트워크에 의해 중재됩니다. 어떤 시점에서도 DSC MATE의 소유권을 압류, 동결 또는 수정할 수 없습니다.",
+                        en: "First, (Ownership) you own the NFT. Each DSC MATE is an NFT on the Klaytn blockchain. When you purchase NFT, you fully own the base DSC MATE, Art. Ownership of the NFT is entirely mediated by smart contracts and the Klaytn Network. You may not seize, freeze or modify ownership of DSC MATE at any time."
                     })}<br />
                     <br />
                     {msg({
                         ko: "둘째, (저작권) DOGESOUND MATES는 MIT 라이센스로 배포되었습니다. 따라서, DSLAB 이 외의 제 3자가 MATES 아트를 개인 또는 상업적으로 활용할 수 있습니다.",
+                        en: "Second, (Copyright) DOGESOUND MATES is distributed under the MIT license. Therefore, third parties other than DSLAB may use MATES art for personal or commercial use."
                     })}
                 </p>
             </section>
