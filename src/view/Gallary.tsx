@@ -87,6 +87,7 @@ export default class Gallary extends Component<{}, {
                     onChange={(event) => this.addFilter(key, event.target.value)}
                 >
                     <option value={""}>{key}</option>
+                    <option value={""}>None</option>
                     {values.map((value) => <option key={value} value={value}>{value}</option>)}
                 </select>)}
                 <a className="reset-filter" onClick={() => {
