@@ -29,7 +29,10 @@ export default class Gallary extends Component<{}, {
                 let pass = true;
                 if (Object.keys(filter).length > 0) {
                     for (const [key, value] of Object.entries(filter)) {
-                        if (token.properties[key] !== value) {
+                        if (token.properties[key] !== value && (
+                            value !== "None" ||
+                            token.properties[key] !== undefined
+                        )) {
                             pass = false;
                         }
                     }
@@ -87,7 +90,7 @@ export default class Gallary extends Component<{}, {
                     onChange={(event) => this.addFilter(key, event.target.value)}
                 >
                     <option value={""}>{key}</option>
-                    <option value={""}>None</option>
+                    <option value={"None"}>None</option>
                     {values.map((value) => <option key={value} value={value}>{value}</option>)}
                 </select>)}
                 <a className="reset-filter" onClick={() => {
