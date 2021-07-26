@@ -1,6 +1,7 @@
+import msg from "msg.js";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Wallet from "./klaytn/Wallet";
+import BrowserInfo from "./BrowserInfo";
 import Activities from "./view/Activities";
 import DogeSound from "./view/activity/DogeSound";
 import Gallary from "./view/Gallary";
@@ -9,7 +10,7 @@ import Layout from "./view/Layout";
 import Mate from "./view/Mate";
 import Terms from "./view/Terms";
 
-Wallet;
+msg.language = BrowserInfo.language;
 
 ReactDOM.render(
     <Layout>
