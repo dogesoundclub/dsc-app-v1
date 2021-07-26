@@ -482,7 +482,7 @@ a {
 #home > section > .loadmap > p {
   background-color: #121013;
   height: 120px;
-  padding: 20px;
+  padding: 200px;
 }
 @media only screen and (max-width: 719px) {
   #home > section > .loadmap > p {
