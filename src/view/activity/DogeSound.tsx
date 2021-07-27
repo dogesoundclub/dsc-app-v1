@@ -26,8 +26,8 @@ export default class DogeSound extends Component {
                 })}</h2>
                 <p>
                     {msg({
-                        ko: "20개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다.(경연 상태가 후보 접수 중일 경우. 도지사운드 후보 예시 : 비트코인은 인류 최대의 뻘짓입니다. , DSC는 쓰레기를 수집합니다.) 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 후보 제출 또는 투표에 사용한 메이트는 해당 투표에서 다시 사용할 수 없습니다. 도지사운드 후보 제출 또는 투표 활동은 메이트 소유권에 일체 영향을 주지 않습니다.",
-                        en: "If you have 20 or more mates, you can submit a nominee. (If the contest status is accepting nominations. Example of Doge Sound candidate : Bitcoin is the biggest bullshit of mankind. , DSC collects garbage.) Doge Sound with the most votes is automatically posted on the main web page. A mate used to submit or vote for a candidate cannot be reused in that vote. Doge sound nomination submissions or voting activities do not affect mate ownership in any way. "
+                        ko: "20개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다.(경연 상태가 후보 접수 중일 경우. 도지사운드 후보 예시 : 비트코인은 인류 최대의 뻘짓입니다. , DSC는 쓰레기를 수집합니다.) 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 후보 제출 또는 투표에 사용한 메이트는 해당 투표에서 다시 사용할 수 없습니다.",
+                        en: "If you have 20 or more mates, you can submit a nominee. (If the contest status is accepting nominations. Example of Doge Sound candidate : Bitcoin is the biggest bullshit of mankind. , DSC collects garbage.) Doge Sound with the most votes is automatically posted on the main web page. A mate used to submit or vote for a candidate cannot be reused in that vote. "
                     })}
                     <span className="important">{msg({
                         ko: "도지사운드 후보 제출 또는 투표 활동은 메이트 소유권에 일체 영향을 주지 않습니다.",
