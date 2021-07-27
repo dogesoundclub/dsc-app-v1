@@ -14,7 +14,7 @@ export default class DogeSound extends Component {
                         <a href="/activity/dogesound">- Dogesound</a>
                     </li>
                     <li className="menu ready">
-                        <a>- Amongus</a>
+                        <a>- Mate Diary</a>
                     </li>
                 </ul>
             </div>

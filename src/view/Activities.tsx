@@ -11,7 +11,7 @@ export default class Activities extends Component {
                         <a href="/activity/dogesound">- Dogesound</a>
                     </li>
                     <li className="menu ready">
-                        <a>- Amongus</a>
+                        <a>- MATE DIARY</a>
                     </li>
                 </ul>
             </div>
