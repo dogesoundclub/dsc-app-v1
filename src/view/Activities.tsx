@@ -34,12 +34,12 @@ export default class Activities extends Component {
                 </p>
             </section>
             <section>
-                <h2 className="ready">AMONGUS (Not released)</h2>
+                <h2 className="ready">INDELIBLE DIARY (Not released)</h2>
                 <p>
                 
                     {msg({
-                     //   ko: "DSC 클럽에 살인 사건이 발생합니다. (가상) 1만개 메이트 중 하나가 범인입니다. 범인을 잡기 위해 관련 증언을 공개하겠습니다. 이를 밝혀낸 분에게 암호화폐 또는 nft로 보상합니다. (범인은 무작위로 추첨된 후 게임이 진행됩니다. - 개발이 미확정된 활동입니다.)",
-                     //   en: "A murder takes place in the DSC club. One in 10,000 mates is the culprit. (If your mate has been selected as murderer, don't be serious. This is a game !) We will release the relevant testimony to catch the culprit. Those who find out are rewarded with cryptocurrency or NFT. (The culprit is drawn at random and the game starts. - This is an activity whose development has not been confirmed.)"
+                        ko: "당신이 보유한 메이트를 일기장으로 사용할 수 있습니다. 메이트에게 이름을 지어줄 수 있고, 짧은 일기 또는 메모를 남길 수 있습니다. 하루에 한번만 쓸 수 있습니다. 조심하세요! 한번 제출된 일기는 클레이튼 블록체인에 기록되며, 개발팀도 지울 수 없습니다. 당신의 흑역사를 대대손손 남기지 않으려면 정신을 바짝 차려야 할 것입니다. 당신의 기록은 메이트 가격에 영향을 줄 수 있습니다.",
+                        en: "You can use the mates you have as a diary. You can give your mate a name, and leave a short diary or note. You can only use it once per day. Look out! Once submitted, the diary is recorded on the Klaytn blockchain and cannot be erased by the development team. In order not to leave a legacy of your dark chapter, you will have to be alert. Your record can affect your mate price."
                     })}
                 </p>
             </section>

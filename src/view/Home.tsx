@@ -41,7 +41,7 @@ export default class Home extends Component<{}, {
                     </div>
                     <div className="intro">
                         {msg({
-                            ko: "도지사운드클럽은 NFT에 기반한 거버넌스가 수행되는 NFT 수집가들의 사교 모임입니다.",
+                            ko: "도지사운드클럽은 NFT를 이용한 거버넌스로 운영되는 NFT 수집가들의 사교 모임입니다.",
                             en: "Doge Sound Club is a social gathering of NFT collectors where NFT-based governance is carried out."
                         })}
                         <br /><br />
@@ -61,8 +61,8 @@ export default class Home extends Component<{}, {
                             </>}
                             {Wallet.existsInjectedProvider === true && this.state.round === -2 && <>
                                 {msg({
-                                    ko: "최다득표를 받은 도지사운드(개소리)를 확인하려면, 카이카스에 접속하세요.",
-                                    en: "To check the Doge Sound(Pathological lie) that received the most votes, log in to Kaikas."
+                                    ko: "안녕하세요. 저는 도우미 위고입니다! 메이트 홀더들의 소중한 뜻을 담은 개소리를 확인하려면 카이카스에 로그인하세요.",
+                                    en: "Hello. I'm a helper wigo! Log in to Kaikas to check the doge sound(Corny joke) that contain the precious meaning of mate holders!"
                                 })}
                             </>}
                             {this.state.round === -1 && <>
