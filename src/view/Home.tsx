@@ -165,7 +165,7 @@ export default class Home extends Component<{}, {
                         <h3>30 %</h3>
                         <p>
                             {msg({
-                                ko: "클럽 활동 '도지사운드 경연'을 활성화합니다.",
+                                ko: "액티비티 '도지사운드 경연'을 활성화합니다.",
                                 en: "Activate the club activity 'Doge Sound Competition'."
                             })}<br />
                             <a href="/activities">{msg({
@@ -178,7 +178,7 @@ export default class Home extends Component<{}, {
                         <h3>50 %</h3>
                         <p>
                             {msg({
-                                ko: "홀더들의 소통을 위해 게시판 '도지소리'를 활성화합니다.",
+                                ko: "액티비티 '메이트의 이름', '지울 수 없는 일기장'을 활성화합니다.",
                                 en: "Activate 'Doge Sori' for the holders's communication"
                             })}
                         </p>
@@ -187,7 +187,7 @@ export default class Home extends Component<{}, {
                         <h3>70 %</h3>
                         <p>
                             {msg({
-                                ko: "정기 정모를 위한 개더타운맵을 공개합니다.",
+                                ko: "홀더들의 소통을 위해 게시판 '도지소리'를 활성화합니다.",
                                 en: "Release a gather town map for regular gathring.",
                             })}
                         </p>

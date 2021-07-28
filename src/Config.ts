@@ -1,9 +1,9 @@
 export default {
 
     // Baobab
-    chainId: 1001,
+    //chainId: 1001,
     // Cypress
-    //chainId: 8217,
+    chainId: 8217,
 
     contracts: {
         // Baobab
