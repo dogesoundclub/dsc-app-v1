@@ -730,6 +730,7 @@ a {
   color: #BFC500;
 }
 #dogesound > section p .important {
+  margin-left: 5px;
   color: #DF3737;
   text-decoration: underline;
 }

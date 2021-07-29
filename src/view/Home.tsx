@@ -14,18 +14,30 @@ export default class Home extends Component<{}, {
         this.state = { round: -2, slogan: "" };
     }
 
-    public async componentDidMount() {
-        sessionStorage.removeItem("__spa_path");
+    private connectHandler = () => {
+        this.loadSlogan();
+    };
 
+    private async loadSlogan() {
         const round = (await SloganContract.getRound()).toNumber() - 1
-        const elected = (await SloganContract.getElected(round)).toNumber();
 
         let slogan = "";
         try {
+            const elected = (await SloganContract.getElected(round)).toNumber();
             slogan = await SloganContract.getCandidate(round, elected);
         } catch (e) {/* ignore. */ }
 
         this.setState({ round, slogan });
+    }
+
+    public async componentDidMount() {
+        sessionStorage.removeItem("__spa_path");
+        Wallet.on("connect", this.connectHandler);
+        await this.loadSlogan();
+    }
+
+    public componentWillUnmount() {
+        Wallet.off("connect", this.connectHandler);
     }
 
     public render() {

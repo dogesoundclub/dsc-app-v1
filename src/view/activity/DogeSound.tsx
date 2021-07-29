@@ -4,7 +4,28 @@ import DogeSoundContest from "../../component/dogesound/DogeSoundContest";
 import RankList from "../../component/dogesound/RankList";
 import Wallet from "../../klaytn/Wallet";
 
-export default class DogeSound extends Component {
+export default class DogeSound extends Component<{}, {
+    connected?: boolean,
+}> {
+
+    constructor(props: {}) {
+        super(props);
+        this.state = {};
+    }
+
+    private connectHandler = () => {
+        this.setState({ connected: true });
+    };
+
+    public async componentDidMount() {
+        Wallet.on("connect", this.connectHandler);
+        this.setState({ connected: await Wallet.connected() });
+    }
+
+    public componentWillUnmount() {
+        Wallet.off("connect", this.connectHandler);
+    }
+
     public render() {
         return <main id="dogesound">
             <div className="menu-bar">
@@ -51,7 +72,12 @@ export default class DogeSound extends Component {
                         en: "The Klaytn Network could not be found. Please install Kaikas."
                     })}
                 </>}
-                {Wallet.existsInjectedProvider === true && <RankList />}
+                {Wallet.existsInjectedProvider === true && this.state.connected === false && <>
+                    {msg({
+                        ko: "카이카스에 로그인하세요.",
+                    })}
+                </>}
+                {Wallet.existsInjectedProvider === true && this.state.connected === true && <RankList />}
             </section>
             <section>
                 <h2>{msg({
@@ -64,7 +90,12 @@ export default class DogeSound extends Component {
                         en: "The Klaytn Network could not be found. Please install Kaikas."
                     })}
                 </>}
-                {Wallet.existsInjectedProvider === true && <DogeSoundContest />}
+                {Wallet.existsInjectedProvider === true && this.state.connected === false && <>
+                    {msg({
+                        ko: "카이카스에 로그인하세요.",
+                    })}
+                </>}
+                {Wallet.existsInjectedProvider === true && this.state.connected === true && <DogeSoundContest />}
             </section>
         </main>;
     }
