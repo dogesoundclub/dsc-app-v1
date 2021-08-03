@@ -1,0 +1,1 @@
+{"version":3,"file":"OwnedMates.js","sourceRoot":"","sources":["../../src/component/OwnedMates.tsx"],"names":[],"mappings":";;;AAAA,iCAAkC;AAElC,MAAqB,UAAW,SAAQ,iBAAiB;IAErD,YAAY,KAAS;QACjB,KAAK,CAAC,KAAK,CAAC,CAAC;QACb,IAAI,CAAC,KAAK,GAAG,EAAE,CAAC;IACpB,CAAC;IAEM,KAAK,CAAC,iBAAiB;IAC9B,CAAC;IAEM,MAAM;QACT,OAAO,2BAAK,SAAS,EAAC,aAAa,WAC7B,CAAC;IACX,CAAC;CACJ;AAdD,6BAcC"}

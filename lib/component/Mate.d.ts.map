@@ -1,0 +1,1 @@
+{"version":3,"file":"Mate.d.ts","sourceRoot":"","sources":["../../src/component/Mate.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,UAAU,SAAS;IACf,MAAM,EAAE,MAAM,CAAC;CAClB;AAED,MAAM,CAAC,OAAO,OAAO,IAAK,SAAQ,SAAS,CAAC,SAAS,EAAE;IACnD,IAAI,EAAE,MAAM,CAAC;CAChB,CAAC;gBAEc,KAAK,EAAE,SAAS;IAKf,iBAAiB;IAGvB,MAAM;CAQhB"}

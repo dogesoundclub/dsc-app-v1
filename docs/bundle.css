@@ -579,6 +579,25 @@ a {
     width: 100%;
   }
 }
+#matedetail {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #matedetail {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
+#matedetail > h1 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
 #gallary {
   width: 1000px;
   padding: 180px 0;
@@ -607,20 +626,6 @@ a {
     font-size: 30px;
     word-break: break-all;
   }
-}
-#gallary .mate-list > .mate {
-  float: left;
-  position: relative;
-  width: 120px;
-  height: 120px;
-  background-size: 100% 100%;
-  color: #ffffff;
-}
-#gallary .mate-list > .mate > span {
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  font-family: DungGeunMo;
 }
 #gallary .menu-bar .filter {
   display: block;
@@ -734,6 +739,72 @@ a {
   color: #DF3737;
   text-decoration: underline;
 }
+#matename {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #matename {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
+#matename > h1 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#matename p {
+  margin-top: 80px;
+  font-size: 20px;
+  line-height: 2em;
+}
+@media only screen and (max-width: 719px) {
+  #matename p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
+#matename p a {
+  color: #BFC500;
+}
+#matemessage {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #matemessage {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
+#matemessage > h1 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#matemessage p {
+  margin-top: 80px;
+  font-size: 20px;
+  line-height: 2em;
+}
+@media only screen and (max-width: 719px) {
+  #matemessage p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
+#matemessage p a {
+  color: #BFC500;
+}
 #terms {
   width: 1000px;
   padding: 180px 0;
@@ -773,6 +844,29 @@ a {
 }
 #terms > section p a {
   color: #BFC500;
+}
+.mate {
+  float: left;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-size: 100% 100%;
+  color: #ffffff;
+}
+.mate > .id {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  font-family: DungGeunMo;
+}
+.mate > .name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
 }
 .rank-list {
   max-height: 500px;

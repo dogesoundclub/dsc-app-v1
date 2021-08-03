@@ -1,6 +1,7 @@
 import { Component } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { RouteProps } from "react-router-dom";
+import Mate from "../component/Mate";
 import database from "../database.json";
 import MateParts from "./MateParts.json";
 
@@ -110,11 +111,7 @@ export default class Gallary extends Component<{}, {
                 loader={this.state.data.length === 0 ? <p>Mate not exists.</p> : <p>Loading...</p>}
                 endMessage={<p>Yay! You have seen it all</p>}
             >
-                {this.state.data.map((data, index) => <a key={index} className="mate" style={{
-                    backgroundImage: `url(https://storage.googleapis.com/dsc-mate/336/dscMate-${data.id}.png)`,
-                }} href={`https://opensea.io/assets/klaytn/0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae/${data.id}`}>
-                    <span>#{data.id}</span>
-                </a>)}
+                {this.state.data.map((data, index) => <Mate key={index} mateId={data.id} />)}
             </InfiniteScroll>
         </main>;
     }

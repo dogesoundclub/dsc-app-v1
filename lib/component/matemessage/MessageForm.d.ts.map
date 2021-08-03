@@ -1,0 +1,1 @@
+{"version":3,"file":"MessageForm.d.ts","sourceRoot":"","sources":["../../../src/component/matemessage/MessageForm.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,SAAS,CAAC,EAAE,EAAE,EAAE,CAAC;gBAE1C,KAAK,EAAE,EAAE;IAKR,iBAAiB;IAGvB,MAAM;CAIhB"}
