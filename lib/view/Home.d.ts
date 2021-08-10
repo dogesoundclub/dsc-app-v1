@@ -2,6 +2,7 @@ import { Component } from "react";
 export default class Home extends Component<{}, {
     round: number;
     slogan: string;
+    winner: string;
 }> {
     constructor(props: {});
     private connectHandler;

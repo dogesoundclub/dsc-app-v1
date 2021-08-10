@@ -7,11 +7,12 @@ import Wallet from "../klaytn/Wallet";
 export default class Home extends Component<{}, {
     round: number,
     slogan: string,
+    winner: string,
 }> {
 
     constructor(props: {}) {
         super(props);
-        this.state = { round: -2, slogan: "" };
+        this.state = { round: -2, slogan: "", winner: "" };
     }
 
     private connectHandler = () => {
@@ -22,12 +23,14 @@ export default class Home extends Component<{}, {
         const round = (await SloganContract.getRound()).toNumber() - 1
 
         let slogan = "";
+        let winner = "";
         try {
             const elected = (await SloganContract.getElected(round)).toNumber();
             slogan = await SloganContract.getCandidate(round, elected);
+            winner = await SloganContract.getCandidateRegister(round, elected);
         } catch (e) {/* ignore. */ }
 
-        this.setState({ round, slogan });
+        this.setState({ round, slogan, winner });
     }
 
     public async componentDidMount() {
@@ -63,6 +66,12 @@ export default class Home extends Component<{}, {
                         })}
                     </div>
                     <div className="slogan">
+                        <div className="winner">
+                            <img src="/images/winner-pc.gif" />
+                            <span>{msg({
+                                ko: `경) 제 ${this.state.round + 1}회 개소리 우승자 (축 : `,
+                            })}<a href={`https://opensea.io/${this.state.winner}`}>{this.state.winner}</a></span>
+                        </div>
                         <img src="/images/top.png" srcSet="/images/top@2x.png 2x" />
                         <div className="panel">
                             {Wallet.existsInjectedProvider !== true && <>

@@ -388,6 +388,30 @@ a {
   margin-top: 429px;
   width: 1130px;
 }
+#home > header > .slogan > .winner {
+  position: relative;
+  width: 1130px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+#home > header > .slogan > .winner > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#home > header > .slogan > .winner > span {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  width: 1130px;
+  text-align: center;
+  color: #000000;
+  font-family: DungGeunMo;
+}
+#home > header > .slogan > .winner > span > a {
+  color: #BFC500;
+  text-decoration: underline;
+}
 #home > header > .slogan > img {
   float: left;
 }

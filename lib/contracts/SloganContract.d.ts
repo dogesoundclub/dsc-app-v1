@@ -13,6 +13,7 @@ declare class SloganContract extends Contract {
     getUserVotes(round: number, user: string): Promise<BigNumber>;
     getCandidateCount(round: number): Promise<BigNumber>;
     getCandidate(round: number, index: number): Promise<string>;
+    getCandidateRegister(round: number, index: number): Promise<string>;
     getVotes(round: number, candidate: number): Promise<BigNumber>;
     registerCandidate(slogan: string, count: number): Promise<void>;
     vote(candidate: number, count: number): Promise<void>;
