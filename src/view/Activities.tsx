@@ -10,8 +10,11 @@ export default class Activities extends Component {
                     <li className="menu">
                         <a href="/activity/dogesound">- Dogesound</a>
                     </li>
-                    <li className="menu ready">
-                        <a>- MATE DIARY</a>
+                    <li className="menu">
+                        <a href="/activity/matename">- Name Your Mate</a>
+                    </li>
+                    <li className="menu">
+                        <a href="/activity/matemessage">- Indelible MSG</a>
                     </li>
                 </ul>
             </div>
@@ -34,12 +37,18 @@ export default class Activities extends Component {
                 </p>
             </section>
             <section>
-                <h2 className="ready">INDELIBLE DIARY (Not released)</h2>
+                <h2><a href="/activity/matename">NAME YOUR MATE</a></h2>
                 <p>
-                
                     {msg({
-                        ko: "당신이 보유한 메이트를 일기장으로 사용할 수 있습니다. 메이트에게 이름을 지어줄 수 있고, 짧은 일기 또는 메모를 남길 수 있습니다. 하루에 한번만 쓸 수 있습니다. 조심하세요! 한번 제출된 일기는 클레이튼 블록체인에 기록되며, 개발팀도 지울 수 없습니다. 당신의 흑역사를 대대손손 남기지 않으려면 정신을 바짝 차려야 할 것입니다. 당신의 기록은 메이트 가격에 영향을 줄 수 있습니다.",
-                        en: "You can use the mates you have as a diary. You can give your mate a name, and leave a short diary or note. You can only use it once per day. Look out! Once submitted, the diary is recorded on the Klaytn blockchain and cannot be erased by the development team. In order not to leave a legacy of your dark chapter, you will have to be alert. Your record can affect your mate price."
+                        ko: "메이트에게 이름을 지어주세요. 메이트가 이름이 없다면, 가스비만을 지불하면 이름을 지어줄 수 있습니다. 하지만 변경을 하려면, 100 클레이 또는 100 믹스를 지불해야 합니다. 다른 메이트와 똑같은 이름을 사용할 수 없습니다. 이름은 메이트 가격에 영향을 줄 수 있습니다."
+                    })}
+                </p>
+            </section>
+            <section>
+                <h2><a href="/activity/matemessage">INDELIBLE DIARY</a></h2>
+                <p>
+                    {msg({
+                        ko: "당신이 보유한 메이트에게 메시지를 남길 수 있습니다. 하루에 한 번 짧은 일기 또는 메모를 남길 수 있습니다. 조심하세요! 한번 제출된 일기는 클레이튼 블록체인에 기록되며, 개발팀도 지울 수 없습니다. 당신의 흑역사를 대대손손 남기지 않으려면 정신을 바짝 차려야 할 것입니다. 당신의 기록은 메이트 가격에 영향을 줄 수 있습니다."
                     })}
                 </p>
             </section>

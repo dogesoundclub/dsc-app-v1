@@ -1,6 +1,5 @@
 import msg from "msg.js";
 import { ChangeEvent, Component } from "react";
-import SkyUtil from "skyutil";
 import SloganContract from "../../contracts/SloganContract";
 import Candidate from "./Candidate";
 
@@ -9,23 +8,52 @@ interface CandidateListProps {
     onSelectCandidate: (candidate: number) => void,
 }
 
+interface CandidateInfo {
+    slogan: string,
+    votes: number,
+}
+
 export default class CandidateList extends Component<CandidateListProps, {
+    loaded: boolean,
     round: number,
-    candidateCount: number,
+    candidates: CandidateInfo[],
     selectedCandidate: number,
 }> {
 
     constructor(props: CandidateListProps) {
         super(props);
-        this.state = { round: -1, candidateCount: -1, selectedCandidate: 0 };
+        this.state = { loaded: false, round: -1, candidates: [], selectedCandidate: 0 };
     }
 
     public async componentDidMount() {
+
         const round = (await SloganContract.getRound()).toNumber();
-        this.setState({
-            round,
-            candidateCount: (await SloganContract.getCandidateCount(round)).toNumber(),
+        const candidateCount = (await SloganContract.getCandidateCount(round)).toNumber();
+
+        let candidates: CandidateInfo[] = [];
+        const promises: Promise<void>[] = [];
+
+        for (let i = 0; i < candidateCount; i += 1) {
+            const promise = async (index: number) => {
+                let slogan = "";
+                try {
+                    slogan = await SloganContract.getCandidate(round, index);
+                } catch (e) {/* ignore. */ }
+
+                const votes = (await SloganContract.getVotes(round, index)).toNumber();
+
+                candidates.push({ slogan, votes });
+            };
+            promises.push(promise(i));
+        }
+
+        await Promise.all(promises);
+
+        candidates = candidates.sort((a, b) => {
+            return b.votes - a.votes;
         });
+
+        this.setState({ loaded: true, round, candidates });
     }
 
     private handleCandidateChange = (candidate: number) => {
@@ -40,15 +68,17 @@ export default class CandidateList extends Component<CandidateListProps, {
     public render() {
         return <div className="candidate-list">
             <p>
-                {msg({
+                {this.state.loaded === false ? msg({
+                    ko: "로딩중...",
+                }) : msg({
                     ko: "진행중인 투표 도지사운드 후보들 :",
                 })}
             </p>
             <ul>
-                {SkyUtil.repeat(this.state.candidateCount, (candidate: number) => <li key={candidate}>
-                    {this.props.period === SloganContract.VOTE_PERIOD && <input type="radio" name="candidate" value={candidate} checked={this.state.selectedCandidate === candidate} onChange={this.handleRadioCheck} />}
-                    <Candidate round={this.state.round} index={candidate} select={() => {
-                        this.handleCandidateChange(candidate);
+                {this.state.candidates.map((candidate: CandidateInfo, index: number) => <li key={index}>
+                    {this.props.period === SloganContract.VOTE_PERIOD && <input type="radio" name="candidate" value={index} checked={this.state.selectedCandidate === index} onChange={this.handleRadioCheck} />}
+                    <Candidate candidate={candidate} select={() => {
+                        this.handleCandidateChange(index);
                     }} />
                 </li>)}
             </ul>

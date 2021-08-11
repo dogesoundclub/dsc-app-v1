@@ -342,7 +342,7 @@ a {
   }
 }
 #home > header {
-  height: 1300px;
+  height: 1440px;
   background-image: url(/images/main.png);
   background-repeat: no-repeat;
   background-position: center top;
@@ -387,6 +387,54 @@ a {
   margin: auto;
   margin-top: 429px;
   width: 1130px;
+}
+#home > header > .slogan > .winner {
+  position: relative;
+  width: 1130px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+#home > header > .slogan > .winner > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#home > header > .slogan > .winner > span {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  width: 1130px;
+  text-align: center;
+  color: #000000;
+  font-family: DungGeunMo;
+}
+#home > header > .slogan > .winner > span > a {
+  color: #BFC500;
+  text-decoration: underline;
+}
+@media only screen and (max-width: 719px) {
+  #home > header > .slogan > .winner > span {
+    width: 360px;
+    font-size: 20px;
+  }
+}
+#home > header > .slogan > .winner > .mobile {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  #home > header > .slogan > .winner {
+    width: 360px;
+    height: 180px;
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  #home > header > .slogan > .winner > .pc {
+    display: none;
+  }
+  #home > header > .slogan > .winner > .mobile {
+    display: block;
+  }
 }
 #home > header > .slogan > img {
   float: left;
@@ -579,6 +627,25 @@ a {
     width: 100%;
   }
 }
+#matedetail {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #matedetail {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
+#matedetail > h1 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
 #gallary {
   width: 1000px;
   padding: 180px 0;
@@ -607,20 +674,6 @@ a {
     font-size: 30px;
     word-break: break-all;
   }
-}
-#gallary .mate-list > .mate {
-  float: left;
-  position: relative;
-  width: 120px;
-  height: 120px;
-  background-size: 100% 100%;
-  color: #ffffff;
-}
-#gallary .mate-list > .mate > span {
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  font-family: DungGeunMo;
 }
 #gallary .menu-bar .filter {
   display: block;
@@ -734,6 +787,72 @@ a {
   color: #DF3737;
   text-decoration: underline;
 }
+#matename {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #matename {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
+#matename > h1 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#matename p {
+  margin-top: 80px;
+  font-size: 20px;
+  line-height: 2em;
+}
+@media only screen and (max-width: 719px) {
+  #matename p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
+#matename p a {
+  color: #BFC500;
+}
+#matemessage {
+  width: 1000px;
+  padding: 180px 0;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  #matemessage {
+    width: auto;
+    padding: 180px 40px;
+  }
+}
+#matemessage > h1 {
+  font-size: 40px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#matemessage p {
+  margin-top: 80px;
+  font-size: 20px;
+  line-height: 2em;
+}
+@media only screen and (max-width: 719px) {
+  #matemessage p {
+    font-size: 30px;
+    word-break: break-all;
+  }
+}
+#matemessage p a {
+  color: #BFC500;
+}
 #terms {
   width: 1000px;
   padding: 180px 0;
@@ -773,6 +892,29 @@ a {
 }
 #terms > section p a {
   color: #BFC500;
+}
+.mate {
+  float: left;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-size: 100% 100%;
+  color: #ffffff;
+}
+.mate > .id {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  font-family: DungGeunMo;
+}
+.mate > .name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 5px 5px 5px #656565;
 }
 .rank-list {
   max-height: 500px;

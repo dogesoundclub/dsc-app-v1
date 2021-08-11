@@ -1,15 +1,12 @@
 import { Component } from "react";
 interface CandidateProps {
-    round: number;
-    index: number;
+    candidate: {
+        slogan: string;
+        votes: number;
+    };
     select: () => void;
 }
-export default class Candidate extends Component<CandidateProps, {
-    slogan: string;
-    votes: number;
-}> {
-    constructor(props: CandidateProps);
-    componentDidMount(): Promise<void>;
+export default class Candidate extends Component<CandidateProps> {
     render(): JSX.Element;
 }
 export {};

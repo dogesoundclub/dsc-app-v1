@@ -3,6 +3,8 @@ declare const _default: {
     contracts: {
         Mate: string;
         Slogan: string;
+        Name: string;
+        Message: string;
     };
 };
 export default _default;

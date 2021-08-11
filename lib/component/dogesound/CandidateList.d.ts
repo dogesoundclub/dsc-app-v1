@@ -3,9 +3,14 @@ interface CandidateListProps {
     period: number;
     onSelectCandidate: (candidate: number) => void;
 }
+interface CandidateInfo {
+    slogan: string;
+    votes: number;
+}
 export default class CandidateList extends Component<CandidateListProps, {
+    loaded: boolean;
     round: number;
-    candidateCount: number;
+    candidates: CandidateInfo[];
     selectedCandidate: number;
 }> {
     constructor(props: CandidateListProps);

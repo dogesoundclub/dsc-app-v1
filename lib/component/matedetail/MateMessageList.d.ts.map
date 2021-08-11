@@ -1,0 +1,1 @@
+{"version":3,"file":"MateMessageList.d.ts","sourceRoot":"","sources":["../../../src/component/matedetail/MateMessageList.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,UAAU,gBAAgB;IACtB,MAAM,EAAE,MAAM,CAAC;CAClB;AAED,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,SAAS,CAAC,gBAAgB,EAAE,EACpE,CAAC;gBAEc,KAAK,EAAE,gBAAgB;IAKtB,iBAAiB;IAGvB,MAAM;CAIhB"}

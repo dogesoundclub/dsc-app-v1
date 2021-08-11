@@ -13,7 +13,7 @@
     }
 
     >header {
-        height             : 1300px;
+        height             : 1440px;
         background-image   : url(/images/main.png);
         background-repeat  : no-repeat;
         background-position: center top;
@@ -57,6 +57,59 @@
             margin    : auto;
             margin-top: 429px;
             width     : 1130px;
+
+            >.winner {
+                position     : relative;
+                width        : 1130px;
+                height       : 120px;
+                margin-bottom: 20px;
+
+                >img {
+                    position: absolute;
+                    left    : 0;
+                    top     : 0;
+                }
+
+                >span {
+                    position   : absolute;
+                    left       : 0;
+                    top        : 44px;
+                    width      : 1130px;
+                    text-align : center;
+                    color      : #000000;
+                    font-family: DungGeunMo;
+
+                    >a {
+                        color          : #BFC500;
+                        text-decoration: underline;
+                    }
+
+                    @media @phone {
+                        width    : 360px;
+                        font-size: 20px;
+                    }
+                }
+
+                >.mobile {
+                    display: none;
+                }
+
+                @media @phone {
+                    width        : 360px;
+                    height       : 180px;
+                    font-size    : 20px;
+                    margin       : auto;
+                    margin-bottom: 20px;
+
+                    >.pc {
+                        display: none;
+                    }
+
+                    >.mobile {
+                        display: block;
+                    }
+                }
+            }
 
             >img {
                 float: left;
