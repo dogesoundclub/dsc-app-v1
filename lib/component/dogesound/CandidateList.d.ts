@@ -4,6 +4,7 @@ interface CandidateListProps {
     onSelectCandidate: (candidate: number) => void;
 }
 interface CandidateInfo {
+    index: number;
     slogan: string;
     votes: number;
 }
