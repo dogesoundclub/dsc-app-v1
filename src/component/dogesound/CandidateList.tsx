@@ -9,6 +9,7 @@ interface CandidateListProps {
 }
 
 interface CandidateInfo {
+    index: number,
     slogan: string,
     votes: number,
 }
@@ -42,7 +43,7 @@ export default class CandidateList extends Component<CandidateListProps, {
 
                 const votes = (await SloganContract.getVotes(round, index)).toNumber();
 
-                candidates.push({ slogan, votes });
+                candidates.push({ index, slogan, votes });
             };
             promises.push(promise(i));
         }
@@ -53,7 +54,7 @@ export default class CandidateList extends Component<CandidateListProps, {
             return b.votes - a.votes;
         });
 
-        this.setState({ loaded: true, round, candidates });
+        this.setState({ loaded: true, round, candidates, selectedCandidate: candidates[0] === undefined ? 0 : candidates[0].index });
     }
 
     private handleCandidateChange = (candidate: number) => {
@@ -75,10 +76,10 @@ export default class CandidateList extends Component<CandidateListProps, {
                 })}
             </p>
             <ul>
-                {this.state.candidates.map((candidate: CandidateInfo, index: number) => <li key={index}>
-                    {this.props.period === SloganContract.VOTE_PERIOD && <input type="radio" name="candidate" value={index} checked={this.state.selectedCandidate === index} onChange={this.handleRadioCheck} />}
+                {this.state.candidates.map((candidate: CandidateInfo) => <li key={candidate.index}>
+                    {this.props.period === SloganContract.VOTE_PERIOD && <input type="radio" name="candidate" value={candidate.index} checked={this.state.selectedCandidate === candidate.index} onChange={this.handleRadioCheck} />}
                     <Candidate candidate={candidate} select={() => {
-                        this.handleCandidateChange(index);
+                        this.handleCandidateChange(candidate.index);
                     }} />
                 </li>)}
             </ul>
