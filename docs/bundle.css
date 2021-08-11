@@ -342,7 +342,7 @@ a {
   }
 }
 #home > header {
-  height: 1300px;
+  height: 1440px;
   background-image: url(/images/main.png);
   background-repeat: no-repeat;
   background-position: center top;
@@ -411,6 +411,30 @@ a {
 #home > header > .slogan > .winner > span > a {
   color: #BFC500;
   text-decoration: underline;
+}
+@media only screen and (max-width: 719px) {
+  #home > header > .slogan > .winner > span {
+    width: 360px;
+    font-size: 20px;
+  }
+}
+#home > header > .slogan > .winner > .mobile {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  #home > header > .slogan > .winner {
+    width: 360px;
+    height: 180px;
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  #home > header > .slogan > .winner > .pc {
+    display: none;
+  }
+  #home > header > .slogan > .winner > .mobile {
+    display: block;
+  }
 }
 #home > header > .slogan > img {
   float: left;

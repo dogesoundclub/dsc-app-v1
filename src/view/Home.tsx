@@ -67,7 +67,8 @@ export default class Home extends Component<{}, {
                     </div>
                     <div className="slogan">
                         <div className="winner">
-                            <img src="/images/winner-pc.gif" />
+                            <img className="pc" src="/images/winner-pc.gif" />
+                            <img className="mobile" src="/images/winner-mobile.gif" />
                             <span>{msg({
                                 ko: `경) 제 ${this.state.round + 1}회 개소리 우승자 (축 : `,
                             })}<a href={`https://opensea.io/${this.state.winner}`}>{this.state.winner}</a></span>

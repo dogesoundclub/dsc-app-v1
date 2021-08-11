@@ -13,7 +13,7 @@
     }
 
     >header {
-        height             : 1300px;
+        height             : 1440px;
         background-image   : url(/images/main.png);
         background-repeat  : no-repeat;
         background-position: center top;
@@ -82,6 +82,31 @@
                     >a {
                         color          : #BFC500;
                         text-decoration: underline;
+                    }
+
+                    @media @phone {
+                        width    : 360px;
+                        font-size: 20px;
+                    }
+                }
+
+                >.mobile {
+                    display: none;
+                }
+
+                @media @phone {
+                    width        : 360px;
+                    height       : 180px;
+                    font-size    : 20px;
+                    margin       : auto;
+                    margin-bottom: 20px;
+
+                    >.pc {
+                        display: none;
+                    }
+
+                    >.mobile {
+                        display: block;
                     }
                 }
             }
