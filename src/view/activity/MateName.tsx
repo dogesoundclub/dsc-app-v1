@@ -1,5 +1,7 @@
 import msg from "msg.js";
 import { Component } from "react";
+import NameForm from "../../component/matename/NameForm";
+import OwnedMates from "../../component/OwnedMates";
 import Wallet from "../../klaytn/Wallet";
 
 export default class MateName extends Component<{}, {
@@ -48,6 +50,8 @@ export default class MateName extends Component<{}, {
                     ko: "메이트에게 이름을 지어주세요. 메이트가 이름이 없었다면, 가스비만을 지불하면 이름을 지어줄 수 있습니다. 하지만 변경을 하려면, 100 클레이 또는 100 믹스를 지불해야 합니다. 다른 메이트와 똑같은 이름을 사용할 수 없습니다. 메이트 이름은 갤러리에 표시됩니다."
                 })}
             </p>
+            <NameForm />
+            <OwnedMates />
         </main>;
     }
 }

@@ -6,7 +6,7 @@ import database from "../database.json";
 import MateParts from "./MateParts.json";
 
 export default class Gallary extends Component<{}, {
-    data: { id: number, name: string }[],
+    mates: number[],
     page: number,
     filter: { [key: string]: string },
     byId?: number,
@@ -14,17 +14,17 @@ export default class Gallary extends Component<{}, {
 
     constructor(props: RouteProps) {
         super(props);
-        this.state = { data: this.getData(0, {}), page: 0, filter: {} };
+        this.state = { mates: this.getData(0, {}), page: 0, filter: {} };
     }
 
     private getData(page: number, filter: { [key: string]: string }, byId?: number) {
-        const data = [];
+        const mates = [];
 
         let count = 0;
         for (const [id, token] of database.collection.entries()) {
             if (byId !== undefined) {
                 if (id === byId) {
-                    data.push({ id, name: token.name });
+                    mates.push(id);
                 }
             } else {
                 let pass = true;
@@ -40,23 +40,23 @@ export default class Gallary extends Component<{}, {
                 }
                 if (pass === true) {
                     if (count === 1024 * (page + 1)) {
-                        return data;
+                        return mates;
                     }
-                    data.push({ id, name: token.name });
+                    mates.push(id);
                     count += 1;
                 }
             }
         }
 
-        return data;
+        return mates;
     }
 
     private loadMore = () => {
-        this.setState({ data: this.getData(this.state.page + 1, this.state.filter, this.state.byId), page: this.state.page + 1 });
+        this.setState({ mates: this.getData(this.state.page + 1, this.state.filter, this.state.byId), page: this.state.page + 1 });
     };
 
     private filterById(byId: number) {
-        this.setState({ data: this.getData(this.state.page, this.state.filter, byId), byId });
+        this.setState({ mates: this.getData(this.state.page, this.state.filter, byId), byId });
     }
 
     private addFilter(key: string, value: string) {
@@ -64,7 +64,7 @@ export default class Gallary extends Component<{}, {
         if (value === "") {
             delete filter[key];
         }
-        this.setState({ data: this.getData(this.state.page, filter, this.state.byId), filter });
+        this.setState({ mates: this.getData(this.state.page, filter, this.state.byId), filter });
     }
 
     public render() {
@@ -79,7 +79,7 @@ export default class Gallary extends Component<{}, {
                 <input className="filter" placeholder="By ID" onChange={(event) => {
                     const id = parseInt(event.target.value, 10);
                     if (isNaN(id) === true) {
-                        this.setState({ data: this.getData(this.state.page, this.state.filter, undefined), byId: undefined });
+                        this.setState({ mates: this.getData(this.state.page, this.state.filter, undefined), byId: undefined });
                     } else {
                         this.filterById(id);
                     }
@@ -95,7 +95,7 @@ export default class Gallary extends Component<{}, {
                     {values.map((value) => <option key={value} value={value}>{value}</option>)}
                 </select>)}
                 <a className="reset-filter" onClick={() => {
-                    this.setState({ data: this.getData(this.state.page, {}, this.state.byId), filter: {} });
+                    this.setState({ mates: this.getData(this.state.page, {}, this.state.byId), filter: {} });
                 }}>Reset Filter</a>
                 <ul className="menus">
                     <li className="menu ready">
@@ -105,13 +105,13 @@ export default class Gallary extends Component<{}, {
             </div>
             <InfiniteScroll
                 className="mate-list"
-                dataLength={this.state.data.length / 8}
+                dataLength={this.state.mates.length / 8}
                 next={this.loadMore}
-                hasMore={this.state.data.length < 10000}
-                loader={this.state.data.length === 0 ? <p>Mate not exists.</p> : <p>Loading...</p>}
+                hasMore={this.state.mates.length < 10000}
+                loader={this.state.mates.length === 0 ? <p>Mate not exists.</p> : <p>Loading...</p>}
                 endMessage={<p>Yay! You have seen it all</p>}
             >
-                {this.state.data.map((data, index) => <Mate key={index} mateId={data.id} />)}
+                {this.state.mates.map((mate, index) => <Mate key={index} mateId={mate} />)}
             </InfiniteScroll>
         </main>;
     }

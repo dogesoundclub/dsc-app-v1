@@ -1,10 +1,7 @@
 import { Component } from "react";
 import { RouteProps } from "react-router-dom";
 export default class Gallary extends Component<{}, {
-    data: {
-        id: number;
-        name: string;
-    }[];
+    mates: number[];
     page: number;
     filter: {
         [key: string]: string;

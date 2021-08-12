@@ -1,6 +1,7 @@
 import { Component } from "react";
 interface MateMessageProps {
     mateId: number;
+    name: string;
 }
 export default class MateMessage extends Component<MateMessageProps, {}> {
     constructor(props: MateMessageProps);
