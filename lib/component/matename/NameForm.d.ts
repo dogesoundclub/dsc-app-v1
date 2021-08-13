@@ -4,7 +4,8 @@ export default class NameForm extends Component<{}, {
     name: string;
 }> {
     constructor(props: {});
-    componentDidMount(): Promise<void>;
+    private handleMateIdChange;
+    private handleNameChange;
     private register;
     render(): JSX.Element;
 }

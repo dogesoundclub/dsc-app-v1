@@ -414,7 +414,7 @@ a {
 }
 @media only screen and (max-width: 719px) {
   #home > header > .slogan > .winner > span {
-    width: 360px;
+    width: 500px;
     font-size: 20px;
   }
 }
@@ -423,7 +423,7 @@ a {
 }
 @media only screen and (max-width: 719px) {
   #home > header > .slogan > .winner {
-    width: 360px;
+    width: 500px;
     height: 180px;
     font-size: 20px;
     margin: auto;

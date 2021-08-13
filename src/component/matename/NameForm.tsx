@@ -1,5 +1,6 @@
 import msg from "msg.js";
-import { Component } from "react";
+import { ChangeEvent, Component } from "react";
+import NameContract from "../../contracts/NameContract";
 
 export default class NameForm extends Component<{}, {
     mateId: number,
@@ -9,26 +10,32 @@ export default class NameForm extends Component<{}, {
     constructor(props: {}) {
         super(props);
         this.state = {
-            mateId: 0,
+            mateId: -1,
             name: "",
         };
     }
 
-    public async componentDidMount() {
-    }
+    private handleMateIdChange = (event: ChangeEvent<HTMLInputElement>) => {
+        this.setState({ mateId: parseInt(event.target.value, 10) });
+    };
+
+    private handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+        this.setState({ name: event.target.value });
+    };
 
     private register = async () => {
+        await NameContract.set(this.state.mateId, this.state.name);
     };
 
     public render() {
         return <div className="name-form">
-            <input className="mate-id" />
+            <input className="mate-id" onChange={this.handleMateIdChange} />
             <span>
                 {msg({
                     ko: "번 메이트의 이름을",
                 })}
             </span>
-            <input className="name" />
+            <input className="name" onChange={this.handleNameChange} />
             <span>
                 {msg({
                     ko: "로 짓겠습니다.",
