@@ -1,7 +1,6 @@
 import { Component } from "react";
 interface MateMessageListProps {
     mateId: number;
-    name: string;
 }
 export default class MateMessageList extends Component<MateMessageListProps, {
     count: number;

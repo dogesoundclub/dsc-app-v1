@@ -646,6 +646,26 @@ a {
   margin-bottom: 40px;
   text-align: center;
 }
+#matedetail > img {
+  display: block;
+  margin: auto;
+  margin-bottom: 70px;
+}
+#matedetail > p {
+  font-family: DungGeunMo;
+  line-height: 45px;
+}
+#matedetail > a {
+  font-family: DungGeunMo;
+  line-height: 45px;
+  color: #BFC500;
+}
+#matedetail > h3 {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: #BFC500;
+}
 #gallary {
   width: 1000px;
   padding: 180px 0;
@@ -1210,5 +1230,208 @@ a {
   display: block;
   text-align: center;
   font-family: DungGeunMo;
+}
+.mate-message-list {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+@media only screen and (max-width: 719px) {
+  .mate-message-list {
+    overflow-x: scroll;
+  }
+}
+.mate-message-list table {
+  width: 100%;
+}
+@media only screen and (max-width: 719px) {
+  .mate-message-list table {
+    width: 1280px;
+  }
+}
+.mate-message-list table thead {
+  color: #BFC500;
+}
+.mate-message-list table thead th {
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+.mate-message-list table tbody {
+  font-family: DungGeunMo;
+}
+.mate-message-list table tbody td {
+  padding: 5px 0;
+}
+.name-form {
+  margin-top: 100px;
+  margin-bottom: 145px;
+}
+.name-form > .content {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
+@media only screen and (max-width: 719px) {
+  .name-form > .content {
+    display: block;
+    height: auto;
+  }
+}
+.name-form > .content > input {
+  display: block;
+  color: #ffffff;
+  background-color: transparent;
+  font-family: DungGeunMo;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 20px;
+  width: 180px;
+}
+@media only screen and (max-width: 719px) {
+  .name-form > .content > input {
+    font-size: 30px;
+    width: 320px;
+    margin: auto;
+  }
+}
+.name-form > .content > span {
+  display: block;
+  font-family: DungGeunMo;
+  padding: 22px 30px 0;
+  font-size: 20px;
+}
+@media only screen and (max-width: 719px) {
+  .name-form > .content > span {
+    font-size: 30px;
+    width: 320px;
+    padding: 30px 0;
+    text-align: center;
+    margin: auto;
+  }
+}
+.name-form > a {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 30px;
+  color: #000000;
+  background-color: #FBFF72;
+  box-shadow: 10px 10px 0px 0px #BFC500;
+  text-align: center;
+  width: 180px;
+  padding: 15px 0;
+  font-family: DungGeunMo;
+  font-weight: bold;
+}
+@media only screen and (max-width: 719px) {
+  .name-form > a {
+    width: 320px;
+    margin: auto;
+  }
+}
+.message-form {
+  margin-top: 100px;
+  margin-bottom: 145px;
+}
+.message-form > .content > input {
+  color: #ffffff;
+  background-color: transparent;
+  font-family: DungGeunMo;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 20px;
+  width: 180px;
+  height: 60px;
+}
+.message-form > .content > input.message {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.message-form > .content > input.mate-id {
+  margin-right: 15px;
+}
+@media only screen and (max-width: 719px) {
+  .message-form > .content > input.mate-id {
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .message-form > .content > input {
+    font-size: 30px;
+    width: 350px !important;
+    margin: auto;
+  }
+}
+.message-form > .content > span {
+  font-family: DungGeunMo;
+  font-size: 20px;
+}
+@media only screen and (max-width: 719px) {
+  .message-form > .content > span {
+    font-size: 30px;
+    width: 350px;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .message-form > .content {
+    width: 350px;
+    margin: auto;
+  }
+}
+.message-form > .terms {
+  margin-top: 80px;
+}
+.message-form > .terms:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.message-form > .terms > input {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.message-form > .terms > p {
+  float: right;
+  width: calc(100% - 60px);
+  margin-top: 0 !important;
+}
+.message-form > a {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 30px;
+  color: #000000;
+  background-color: #FBFF72;
+  box-shadow: 10px 10px 0px 0px #BFC500;
+  text-align: center;
+  width: 180px;
+  padding: 15px 0;
+  font-family: DungGeunMo;
+  font-weight: bold;
+}
+@media only screen and (max-width: 719px) {
+  .message-form > a {
+    width: 320px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+.owned-mates > .mate-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 

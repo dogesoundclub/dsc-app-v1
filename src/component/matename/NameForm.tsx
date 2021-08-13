@@ -29,18 +29,20 @@ export default class NameForm extends Component<{}, {
 
     public render() {
         return <div className="name-form">
-            <input className="mate-id" onChange={this.handleMateIdChange} />
-            <span>
-                {msg({
-                    ko: "번 메이트의 이름을",
-                })}
-            </span>
-            <input className="name" onChange={this.handleNameChange} />
-            <span>
-                {msg({
-                    ko: "로 짓겠습니다.",
-                })}
-            </span>
+            <div className="content">
+                <input className="mate-id" onChange={this.handleMateIdChange} />
+                <span>
+                    {msg({
+                        ko: "번 메이트의 이름을",
+                    })}
+                </span>
+                <input className="name" onChange={this.handleNameChange} />
+                <span>
+                    {msg({
+                        ko: "로 짓겠습니다.",
+                    })}
+                </span>
+            </div>
             <a onClick={this.register}>{msg({
                 ko: "제출하기",
             })}</a>

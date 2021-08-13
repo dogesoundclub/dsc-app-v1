@@ -39,26 +39,29 @@ export default class MateDetail extends Component<MateDetailProps, {
                     </li>
                 </ul>
             </div>
-            <img src={`https://storage.googleapis.com/dsc-mate/336/dscMate-${mateId}.png`} />
             <h1>{msg({
                 ko: "메이트 정보",
             })}</h1>
-            <div>
+            <img src={`https://storage.googleapis.com/dsc-mate/336/dscMate-${mateId}.png`} />
+            <p>
                 {msg({
                     ko: "번호 : ",
                 })}
                 {mateId}
-            </div>
-            <div>
+            </p>
+            <p>
                 {msg({
                     ko: "이름 : ",
                 })}
                 {this.state.name}
-            </div>
+            </p>
             <a href={`https://opensea.io/assets/klaytn/0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae/${mateId}`}>{msg({
                 ko: "▶ 오픈씨에서 확인하기",
             })}</a>
-            <MateMessageList mateId={mateId} name={this.state.name} />
+            <h3>{msg({
+                ko: `${this.state.name}에게 남겨진 메시지들`
+            })}</h3>
+            <MateMessageList mateId={mateId} />
         </main>;
     }
 }
