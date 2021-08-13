@@ -1,6 +1,7 @@
 import msg from "msg.js";
 import { Component } from "react";
 import MateMessageList from "../component/matedetail/MateMessageList";
+import NameContract from "../contracts/NameContract";
 
 interface MateDetailProps {
     match: { params: any };
@@ -13,6 +14,15 @@ export default class MateDetail extends Component<MateDetailProps, {
     constructor(props: MateDetailProps) {
         super(props);
         this.state = { name: "" };
+    }
+
+    public async componentDidMount() {
+        const mateId = this.props.match.params.mateId;
+        const count = (await NameContract.recordCount(mateId)).toNumber();
+        if (count > 0) {
+            const record = await NameContract.record(mateId, count - 1);
+            this.setState({ name: record.name });
+        }
     }
 
     public render() {

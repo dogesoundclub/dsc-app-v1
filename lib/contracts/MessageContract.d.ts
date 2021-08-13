@@ -2,8 +2,9 @@ import { BigNumber, BigNumberish } from "ethers";
 import Contract from "./Contract";
 export interface MessageRecord {
     owner: string;
+    name: string;
     message: string;
-    blockNumber: BigNumber;
+    blockNumber: string;
 }
 declare class MessageContract extends Contract {
     constructor();

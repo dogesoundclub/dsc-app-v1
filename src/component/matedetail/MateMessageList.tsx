@@ -1,20 +1,27 @@
 import msg from "msg.js";
 import { Component } from "react";
+import SkyUtil from "skyutil";
+import MessageContract from "../../contracts/MessageContract";
+import MateMessage from "./MateMessage";
 
-interface MateMessageProps {
+interface MateMessageListProps {
     mateId: number,
     name: string,
 }
 
-export default class MateMessage extends Component<MateMessageProps, {
+export default class MateMessageList extends Component<MateMessageListProps, {
+    count: number,
 }> {
 
-    constructor(props: MateMessageProps) {
+    constructor(props: MateMessageListProps) {
         super(props);
-        this.state = {};
+        this.state = { count: 0 };
     }
 
     public async componentDidMount() {
+        const mateId = this.props.mateId;
+        const count = (await MessageContract.recordCount(mateId)).toNumber();
+        this.setState({ count });
     }
 
     public render() {
@@ -32,6 +39,7 @@ export default class MateMessage extends Component<MateMessageProps, {
                     </tr>
                 </thead>
                 <tbody>
+                    {SkyUtil.repeat(this.state.count, (index: number) => <MateMessage key={index} mateId={this.props.mateId} index={index} />)}
                 </tbody>
             </table>
         </div>;

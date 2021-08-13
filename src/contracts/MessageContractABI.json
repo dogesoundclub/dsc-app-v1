@@ -15,6 +15,20 @@
 	},
 	{
 		"constant": true,
+		"inputs": [],
+		"name": "mateName",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
 		"inputs": [
 			{
 				"name": "mateId",
@@ -30,6 +44,10 @@
 			{
 				"name": "owner",
 				"type": "address"
+			},
+			{
+				"name": "name",
+				"type": "string"
 			},
 			{
 				"name": "message",
@@ -132,6 +150,10 @@
 				"type": "address"
 			},
 			{
+				"name": "name",
+				"type": "string"
+			},
+			{
 				"name": "message",
 				"type": "string"
 			},
@@ -196,6 +218,10 @@
 			{
 				"name": "_mate",
 				"type": "address"
+			},
+			{
+				"name": "_mateName",
+				"type": "address"
 			}
 		],
 		"payable": false,
@@ -214,6 +240,11 @@
 				"indexed": true,
 				"name": "owner",
 				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "name",
+				"type": "string"
 			},
 			{
 				"indexed": false,
