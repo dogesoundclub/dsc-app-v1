@@ -209,8 +209,8 @@ export default class Home extends Component<{}, {
                         <h3>70 %</h3>
                         <p>
                             {msg({
-                                ko: "홀더들의 소통을 위해 게시판 '도지소리'를 활성화합니다.",
-                                en: "Release a gather town map for regular gathring.",
+                                ko: "클레이튼 토큰 '믹스'를 발행합니다. 메이트 홀더에게 일정 발행량이 배분됩니다.",
+                                en: "Issue klaytn token 'Mix'. A certain amount of issuance is allocated to mate holders."
                             })}
                         </p>
                     </div>
@@ -218,8 +218,7 @@ export default class Home extends Component<{}, {
                         <h3>100 %</h3>
                         <p>
                             {msg({
-                                ko: "클레이튼 토큰 '믹스'를 발행합니다. 메이트 홀더에게 일정 발행량이 배분됩니다.",
-                                en: "Issue klaytn token 'Mix'. A certain amount of issuance is allocated to mate holders."
+                                ko: "메이트 홀더들이 가진 믹스로 구입할 수 있는 벌크 아바타를 런칭합니다. "
                             })}
                         </p>
                     </div>

@@ -6,7 +6,7 @@ import Activities from "./view/Activities";
 import DogeSound from "./view/activity/DogeSound";
 import MateMessage from "./view/activity/MateMessage";
 import MateName from "./view/activity/MateName";
-import Gallary from "./view/Gallary";
+import Gallery from "./view/Gallery";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
 import Mate from "./view/Mate";
@@ -22,7 +22,7 @@ ReactDOM.render(
                 <Route exact path="/" component={Home} />
                 <Route exact path="/mate" component={Mate} />
                 <Route exact path="/mate/:mateId" component={MateDetail} />
-                <Route exact path="/gallary" component={Gallary} />
+                <Route exact path="/gallery" component={Gallery} />
                 <Route exact path="/activities" component={Activities} />
                 <Route exact path="/activity/dogesound" component={DogeSound} />
                 <Route exact path="/activity/matename" component={MateName} />

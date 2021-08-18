@@ -5,7 +5,7 @@ import Mate from "../component/Mate";
 import database from "../database.json";
 import MateParts from "./MateParts.json";
 
-export default class Gallary extends Component<{}, {
+export default class Gallery extends Component<{}, {
     mates: number[],
     page: number,
     filter: { [key: string]: string },
@@ -68,7 +68,7 @@ export default class Gallary extends Component<{}, {
     }
 
     public render() {
-        return <main id="gallary">
+        return <main id="gallery">
             <div className="menu-bar">
                 <h4>Gallery</h4>
                 <ul className="menus">
