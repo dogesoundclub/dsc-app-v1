@@ -46,8 +46,14 @@ export default class MessageForm extends Component<{}, {
 
     private register = async () => {
         if (this.state.notMateHolder !== true && this.state.termChecked === true) {
-            await MessageContract.set(this.state.mateId, this.state.message);
-            setTimeout(() => location.reload(), 1000);
+            if ((await MessageContract.remainBlocks(this.state.mateId)).toNumber() !== 0) {
+                alert(msg({
+                    ko: `${this.state.mateId}번 메이트에게 메시지를 남긴지 아직 24시간이 지나지 않았습니다.`,
+                }));
+            } else {
+                await MessageContract.set(this.state.mateId, this.state.message);
+                setTimeout(() => location.reload(), 1000);
+            }
         }
     };
 
