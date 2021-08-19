@@ -1,5 +1,7 @@
 import msg from "msg.js";
 import { Component } from "react";
+import MessageForm from "../../component/matemessage/MessageForm";
+import OwnedMates from "../../component/OwnedMates";
 import Wallet from "../../klaytn/Wallet";
 
 export default class MateMessage extends Component<{}, {
@@ -48,6 +50,8 @@ export default class MateMessage extends Component<{}, {
                     ko: "당신이 보유한 메이트에게 메시지를 남길 수 있습니다. 하루에 한 번 짧은 일기 또는 메모를 남길 수 있습니다. 조심하세요! 한번 제출된 일기는 클레이튼 블록체인에 기록되며, 개발팀도 지울 수 없습니다. 당신의 흑역사를 대대손손 남기지 않으려면 정신을 바짝 차려야 할 것입니다. 일기는 타인이 열람할 수 있습니다."
                 })}
             </p>
+            <MessageForm />
+            <OwnedMates />
         </main>;
     }
 }

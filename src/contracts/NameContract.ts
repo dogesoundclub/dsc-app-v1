@@ -29,7 +29,6 @@ class NameContract extends Contract {
     public async record(mateId: BigNumberish, index: BigNumberish): Promise<NameRecord> {
         const contract = await this.loadWalletContract();
         const result = await contract.methods.record(mateId, index).call();
-        console.log(result);
         return {
             owner: result[0],
             name: result[1],

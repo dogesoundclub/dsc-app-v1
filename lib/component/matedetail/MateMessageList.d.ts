@@ -1,9 +1,11 @@
 import { Component } from "react";
-interface MateMessageProps {
+interface MateMessageListProps {
     mateId: number;
 }
-export default class MateMessage extends Component<MateMessageProps, {}> {
-    constructor(props: MateMessageProps);
+export default class MateMessageList extends Component<MateMessageListProps, {
+    count: number;
+}> {
+    constructor(props: MateMessageListProps);
     componentDidMount(): Promise<void>;
     render(): JSX.Element;
 }

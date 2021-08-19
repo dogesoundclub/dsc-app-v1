@@ -34,9 +34,8 @@ export default class Layout extends Component<{}, {
             <header className={this.state.showingNav === true ? "showing" : "hiding"} onClick={(e) => e.stopPropagation()}>
                 <a href="/">HOME</a>
                 <a href="/mate">NFT</a>
-                <a href="/gallary">GALLARY</a>
+                <a href="/gallery">GALLERY</a>
                 <a href="/activities">ACTIVITIES</a>
-                <a className="ready" href="/">BOARD</a>
                 <div className="language">● LANG : <select value={BrowserInfo.language.substring(0, 2)} onChange={(event) => BrowserInfo.changeLanguage(event.target.value)}>
                     <option value="ko">한국어</option>
                     <option value="en">English</option>

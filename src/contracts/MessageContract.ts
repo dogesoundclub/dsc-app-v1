@@ -5,8 +5,9 @@ import Contract from "./Contract";
 
 export interface MessageRecord {
     owner: string,
+    name: string,
     message: string,
-    blockNumber: BigNumber,
+    blockNumber: string,
 }
 
 class MessageContract extends Contract {
@@ -29,11 +30,11 @@ class MessageContract extends Contract {
     public async record(mateId: BigNumberish, index: BigNumberish): Promise<MessageRecord> {
         const contract = await this.loadWalletContract();
         const result = await contract.methods.record(mateId, index).call();
-        console.log(result);
         return {
             owner: result[0],
-            message: result[1],
-            blockNumber: result[2],
+            name: result[1],
+            message: result[2],
+            blockNumber: result[3],
         };
     }
 }
