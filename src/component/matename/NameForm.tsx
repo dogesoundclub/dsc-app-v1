@@ -25,6 +25,7 @@ export default class NameForm extends Component<{}, {
 
     private register = async () => {
         await NameContract.set(this.state.mateId, this.state.name);
+        setTimeout(() => location.reload(), 1000);
     };
 
     public render() {

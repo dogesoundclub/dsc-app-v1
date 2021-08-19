@@ -415,7 +415,8 @@ a {
 @media only screen and (max-width: 719px) {
   #home > header > .slogan > .winner > span {
     width: 500px;
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 50px;
   }
 }
 #home > header > .slogan > .winner > .mobile {
@@ -666,18 +667,18 @@ a {
   font-size: 40px;
   color: #BFC500;
 }
-#gallary {
+#gallery {
   width: 1000px;
   padding: 180px 0;
   margin: auto;
 }
 @media only screen and (max-width: 719px) {
-  #gallary {
+  #gallery {
     width: auto;
     padding: 180px 40px;
   }
 }
-#gallary .mate-list:after {
+#gallery .mate-list:after {
   content: " ";
   display: block;
   font-size: 0;
@@ -685,17 +686,17 @@ a {
   clear: both;
   visibility: hidden;
 }
-#gallary .mate-list > p {
+#gallery .mate-list > p {
   margin-top: 20px;
   text-align: center;
 }
 @media only screen and (max-width: 719px) {
-  #gallary .mate-list > p {
+  #gallery .mate-list > p {
     font-size: 30px;
     word-break: break-all;
   }
 }
-#gallary .menu-bar .filter {
+#gallery .menu-bar .filter {
   display: block;
   width: 100%;
   height: 50px;
@@ -705,7 +706,7 @@ a {
   font-size: 25px;
   font-family: BankGothic;
 }
-#gallary .menu-bar .reset-filter {
+#gallery .menu-bar .reset-filter {
   margin-top: 20px;
   display: block;
   font-size: 30px;

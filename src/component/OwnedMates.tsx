@@ -42,7 +42,7 @@ export default class OwnedMates extends Component<{}, {
             <p>
                 {msg({
                     ko: "- 지갑 주소 : ",
-                })}{this.state.walletAddress}
+                })}<a href={`https://opensea.io/${this.state.walletAddress}`}>{this.state.walletAddress}</a>
                 <br />
                 {msg({
                     ko: "- 보유 중인 메이트",

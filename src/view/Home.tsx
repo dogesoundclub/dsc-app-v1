@@ -209,8 +209,7 @@ export default class Home extends Component<{}, {
                         <h3>70 %</h3>
                         <p>
                             {msg({
-                                ko: "클레이튼 토큰 '믹스'를 발행합니다. 메이트 홀더에게 일정 발행량이 배분됩니다.",
-                                en: "Issue klaytn token 'Mix'. A certain amount of issuance is allocated to mate holders."
+                                ko: "액티비티 '팔로우 미'를 활성화합니다. 로우파이 비디오를 업로드합니다."
                             })}
                         </p>
                     </div>
@@ -218,7 +217,7 @@ export default class Home extends Component<{}, {
                         <h3>100 %</h3>
                         <p>
                             {msg({
-                                ko: "메이트 홀더들이 가진 믹스로 구입할 수 있는 벌크 아바타를 런칭합니다. "
+                                ko: "도지사운드클럽 메이트 V2를 런칭합니다. 기존 메이트 홀더들에게 유리한 결제 방식으로 런칭됩니다."
                             })}
                         </p>
                     </div>
@@ -249,7 +248,13 @@ export default class Home extends Component<{}, {
                         {msg({
                             ko: "- 카카오톡 : ",
                             en: "- KAKAOTALK :"
-                        })}<a href="https://open.kakao.com/o/gFJzBJ5c">https://open.kakao.com/o/gFJzBJ5c</a><br />
+                        })}<a href="https://open.kakao.com/o/gFJzBJ5c">https://open.kakao.com/o/gFJzBJ5c</a> {msg({
+                            ko: "(참여코드 : 10000)"
+                        })}<br />
+                        {msg({
+                            ko: "- 디스코드 : ",
+                            en: "- DISCORD :"
+                        })}<a href="https://discord.gg/E3ftHq8x8h">https://discord.gg/E3ftHq8x8h</a><br />
                         {msg({
                             ko: "- 트위터 : ",
                             en: "- TWITTER :"

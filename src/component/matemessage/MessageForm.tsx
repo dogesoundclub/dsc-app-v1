@@ -32,6 +32,7 @@ export default class MessageForm extends Component<{}, {
     private register = async () => {
         if (this.state.pass === true) {
             await MessageContract.set(this.state.mateId, this.state.message);
+            setTimeout(() => location.reload(), 1000);
         }
     };
 
