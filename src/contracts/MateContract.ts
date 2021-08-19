@@ -1,4 +1,4 @@
-import { BigNumber } from "ethers";
+import { BigNumber, BigNumberish } from "ethers";
 import Config from "../Config";
 import Contract from "./Contract";
 
@@ -6,6 +6,11 @@ class MateContract extends Contract {
 
     constructor() {
         super(Config.contracts.Mate, require("./MateContractABI.json"));
+    }
+
+    public async ownerOf(mateId: BigNumberish): Promise<string> {
+        const contract = await this.loadWalletContract();
+        return await contract.methods.ownerOf(mateId).call();
     }
 
     public async balanceOf(owner: string): Promise<BigNumber> {

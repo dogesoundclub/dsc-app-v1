@@ -1,11 +1,15 @@
+import Debouncer from "@hanul/debouncer";
 import msg from "msg.js";
 import { ChangeEvent, Component } from "react";
+import MateContract from "../../contracts/MateContract";
 import MessageContract from "../../contracts/MessageContract";
+import Wallet from "../../klaytn/Wallet";
 
 export default class MessageForm extends Component<{}, {
     mateId: number,
     message: string,
-    pass: boolean,
+    notMateHolder: boolean,
+    termChecked: boolean,
 }> {
 
     constructor(props: {}) {
@@ -13,12 +17,23 @@ export default class MessageForm extends Component<{}, {
         this.state = {
             mateId: -1,
             message: "",
-            pass: false,
+            notMateHolder: false,
+            termChecked: false,
         };
     }
 
+    private mateIdChangeDebouncer: Debouncer = new Debouncer(100, async () => {
+        const walletAddress = await Wallet.loadAddress();
+        if (walletAddress === undefined || await MateContract.ownerOf(this.state.mateId) !== walletAddress) {
+            this.setState({ notMateHolder: true });
+        } else {
+            this.setState({ notMateHolder: false });
+        }
+    });
+
     private handleMateIdChange = (event: ChangeEvent<HTMLInputElement>) => {
         this.setState({ mateId: parseInt(event.target.value, 10) });
+        this.mateIdChangeDebouncer.run();
     };
 
     private handleMessageChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -26,11 +41,11 @@ export default class MessageForm extends Component<{}, {
     };
 
     private handleTermsChange = (event: ChangeEvent<HTMLInputElement>) => {
-        this.setState({ pass: event.target.checked });
+        this.setState({ termChecked: event.target.checked });
     };
 
     private register = async () => {
-        if (this.state.pass === true) {
+        if (this.state.notMateHolder !== true && this.state.termChecked === true) {
             await MessageContract.set(this.state.mateId, this.state.message);
             setTimeout(() => location.reload(), 1000);
         }
@@ -52,6 +67,11 @@ export default class MessageForm extends Component<{}, {
                     })}
                 </span>
             </div>
+            {isNaN(this.state.mateId) !== true && this.state.notMateHolder && <p className="error">
+                {msg({
+                    ko: `${this.state.mateId}번 메이트 홀더가 아닙니다.`,
+                })}
+            </p>}
             <div className="terms">
                 <input type="checkbox" onChange={this.handleTermsChange} />
                 <p>

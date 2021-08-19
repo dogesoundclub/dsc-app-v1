@@ -17,12 +17,7 @@ export default class MateDetail extends Component<MateDetailProps, {
     }
 
     public async componentDidMount() {
-        const mateId = this.props.match.params.mateId;
-        const count = (await NameContract.recordCount(mateId)).toNumber();
-        if (count > 0) {
-            const record = await NameContract.record(mateId, count - 1);
-            this.setState({ name: record.name });
-        }
+        this.setState({ name: await NameContract.getName(this.props.match.params.mateId) });
     }
 
     public render() {

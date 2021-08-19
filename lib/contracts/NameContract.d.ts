@@ -10,6 +10,8 @@ declare class NameContract extends Contract {
     set(mateId: BigNumberish, name: string): Promise<void>;
     recordCount(mateId: BigNumberish): Promise<BigNumber>;
     record(mateId: BigNumberish, index: BigNumberish): Promise<NameRecord>;
+    exists(name: string): Promise<boolean>;
+    getName(mateId: BigNumberish): Promise<string>;
 }
 declare const _default: NameContract;
 export default _default;

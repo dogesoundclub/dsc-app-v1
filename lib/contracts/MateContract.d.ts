@@ -1,7 +1,8 @@
-import { BigNumber } from "ethers";
+import { BigNumber, BigNumberish } from "ethers";
 import Contract from "./Contract";
 declare class MateContract extends Contract {
     constructor();
+    ownerOf(mateId: BigNumberish): Promise<string>;
     balanceOf(owner: string): Promise<BigNumber>;
     tokenOfOwnerByIndex(owner: string, index: number): Promise<BigNumber>;
 }
