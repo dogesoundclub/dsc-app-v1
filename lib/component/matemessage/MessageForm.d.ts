@@ -2,9 +2,11 @@ import { Component } from "react";
 export default class MessageForm extends Component<{}, {
     mateId: number;
     message: string;
-    pass: boolean;
+    notMateHolder: boolean;
+    termChecked: boolean;
 }> {
     constructor(props: {});
+    private mateIdChangeDebouncer;
     private handleMateIdChange;
     private handleMessageChange;
     private handleTermsChange;

@@ -37,6 +37,11 @@ class MessageContract extends Contract {
             blockNumber: result[3],
         };
     }
+
+    public async lastMessage(mateId: BigNumberish): Promise<string> {
+        const contract = await this.loadWalletContract();
+        return await contract.methods.lastMessage(mateId).call();
+    }
 }
 
 export default new MessageContract();

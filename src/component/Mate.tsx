@@ -15,11 +15,7 @@ export default class Mate extends Component<MateProps, {
     }
 
     public async componentDidMount() {
-        const count = (await NameContract.recordCount(this.props.mateId)).toNumber();
-        if (count > 0) {
-            const record = await NameContract.record(this.props.mateId, count - 1);
-            this.setState({ name: record.name });
-        }
+        this.setState({ name: await NameContract.getName(this.props.mateId) });
     }
 
     public render() {

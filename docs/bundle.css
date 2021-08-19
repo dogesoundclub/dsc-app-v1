@@ -1311,6 +1311,10 @@ a {
     margin: auto;
   }
 }
+.name-form > .error {
+  color: red;
+  text-align: center;
+}
 .name-form > a {
   display: block;
   margin: auto;
@@ -1384,6 +1388,10 @@ a {
     width: 350px;
     margin: auto;
   }
+}
+.message-form > .error {
+  color: red;
+  text-align: center;
 }
 .message-form > .terms {
   margin-top: 80px;

@@ -35,6 +35,16 @@ class NameContract extends Contract {
             blockNumber: result[2],
         };
     }
+
+    public async exists(name: string): Promise<boolean> {
+        const contract = await this.loadWalletContract();
+        return await contract.methods.exists(name).call();
+    }
+
+    public async getName(mateId: BigNumberish): Promise<string> {
+        const contract = await this.loadWalletContract();
+        return await contract.methods.getName(mateId).call();
+    }
 }
 
 export default new NameContract();
