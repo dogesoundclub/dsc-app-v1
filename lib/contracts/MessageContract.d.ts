@@ -11,6 +11,7 @@ declare class MessageContract extends Contract {
     set(mateId: BigNumberish, message: string): Promise<void>;
     recordCount(mateId: BigNumberish): Promise<BigNumber>;
     record(mateId: BigNumberish, index: BigNumberish): Promise<MessageRecord>;
+    remainBlocks(mateId: BigNumberish): Promise<BigNumber>;
     lastMessage(mateId: BigNumberish): Promise<string>;
 }
 declare const _default: MessageContract;
