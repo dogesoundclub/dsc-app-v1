@@ -264,6 +264,10 @@ export default class Home extends Component<{}, {
                             en: "- INSTAGRAM : "
                         })}@dogesoundclub<br />
                         {msg({
+                            ko: "- 깃허브 : ",
+                            en: "- GITHUB :"
+                        })}<a href="https://github.com/dogesoundclub">https://github.com/dogesoundclub</a><br />
+                        {msg({
                             ko: "- 유튜브 : ",
                             en: "- YOUTUBE : "
                         })}<a href="https://www.youtube.com/channel/UCnt1jjJpL-YdHNcooykdY4w">https://www.youtube.com/channel/UCnt1jjJpL-YdHNcooykdY4w</a><br />
