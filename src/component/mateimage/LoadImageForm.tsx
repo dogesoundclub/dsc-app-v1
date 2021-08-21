@@ -87,12 +87,12 @@ export default class LoadImageForm extends Component<{}, {
                 {this.state.image !== undefined &&
                     <img src={this.state.image} />
                 }
-                {attributes !== undefined && <p>
+                {/*attributes !== undefined && <p>
                     {msg({
                         ko: "메이트 특성 : ",
                     })}
                     {attributes}
-                </p>}
+                </p>*/}
             </div>
         </div>;
     }

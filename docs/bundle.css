@@ -1361,6 +1361,27 @@ a {
   color: red;
   text-align: center;
 }
+.name-form > .terms {
+  margin-top: 80px;
+}
+.name-form > .terms:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.name-form > .terms > input {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.name-form > .terms > p {
+  float: right;
+  width: calc(100% - 60px);
+  margin-top: 0 !important;
+}
 .name-form > a {
   display: block;
   margin: auto;

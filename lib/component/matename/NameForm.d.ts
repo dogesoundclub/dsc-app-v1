@@ -4,12 +4,14 @@ export default class NameForm extends Component<{}, {
     name: string;
     notMateHolder: boolean;
     nameExists: boolean;
+    termChecked: boolean;
 }> {
     constructor(props: {});
     private mateIdChangeDebouncer;
     private handleMateIdChange;
     private nameChangeDebouncer;
     private handleNameChange;
+    private handleTermsChange;
     private register;
     render(): JSX.Element;
 }
