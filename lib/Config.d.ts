@@ -5,6 +5,8 @@ declare const _default: {
         Slogan: string;
         Name: string;
         Message: string;
+        Image: string;
+        Attributes: string;
     };
 };
 export default _default;

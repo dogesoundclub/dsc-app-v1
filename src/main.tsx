@@ -2,6 +2,7 @@ import msg from "msg.js";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BrowserInfo from "./BrowserInfo";
+import FullyOnChain from "./view/achievements/FullyOnChain";
 import Activities from "./view/Activities";
 import DogeSound from "./view/activity/DogeSound";
 import MateMessage from "./view/activity/MateMessage";
@@ -27,6 +28,7 @@ ReactDOM.render(
                 <Route exact path="/activity/dogesound" component={DogeSound} />
                 <Route exact path="/activity/matename" component={MateName} />
                 <Route exact path="/activity/matemessage" component={MateMessage} />
+                <Route exact path="/achievement/fully-on-chain" component={FullyOnChain} />
                 <Route exact path="/terms" component={Terms} />
             </Switch>
         </Router>
