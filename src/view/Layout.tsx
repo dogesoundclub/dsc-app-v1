@@ -36,6 +36,7 @@ export default class Layout extends Component<{}, {
                 <a href="/mate">NFT</a>
                 <a href="/gallery">GALLERY</a>
                 <a href="/activities">ACTIVITIES</a>
+                <a href="/achievement/fully-on-chain">ACHIEVEMENTS</a>
                 <div className="language">● LANG : <select value={BrowserInfo.language.substring(0, 2)} onChange={(event) => BrowserInfo.changeLanguage(event.target.value)}>
                     <option value="ko">한국어</option>
                     <option value="en">English</option>
