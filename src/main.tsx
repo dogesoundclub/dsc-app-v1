@@ -33,4 +33,4 @@ ReactDOM.render(
             </Switch>
         </Router>
     </Layout>
-    , document.getElementById("root"))
+    , document.getElementById("root"));
