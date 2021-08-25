@@ -9,8 +9,7 @@ class ImageContract extends Contract {
     }
 
     public async image(mateId: BigNumberish): Promise<string> {
-        const contract = await this.loadWalletContract();
-        return await contract.methods.image(mateId).call();
+        return await this.contract.methods.image(mateId).call();
     }
 }
 

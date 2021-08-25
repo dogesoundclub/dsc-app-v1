@@ -23,13 +23,11 @@ class MessageContract extends Contract {
     }
 
     public async recordCount(mateId: BigNumberish): Promise<BigNumber> {
-        const contract = await this.loadWalletContract();
-        return BigNumber.from(contract === undefined ? -1 : await contract.methods.recordCount(mateId).call());
+        return BigNumber.from(await this.contract.methods.recordCount(mateId).call());
     }
 
     public async record(mateId: BigNumberish, index: BigNumberish): Promise<MessageRecord> {
-        const contract = await this.loadWalletContract();
-        const result = await contract.methods.record(mateId, index).call();
+        const result = await this.contract.methods.record(mateId, index).call();
         return {
             owner: result[0],
             name: result[1],
@@ -39,13 +37,11 @@ class MessageContract extends Contract {
     }
 
     public async remainBlocks(mateId: BigNumberish): Promise<BigNumber> {
-        const contract = await this.loadWalletContract();
-        return BigNumber.from(await contract.methods.remainBlocks(mateId).call());
+        return BigNumber.from(await this.contract.methods.remainBlocks(mateId).call());
     }
 
     public async lastMessage(mateId: BigNumberish): Promise<string> {
-        const contract = await this.loadWalletContract();
-        return await contract.methods.lastMessage(mateId).call();
+        return await this.contract.methods.lastMessage(mateId).call();
     }
 }
 

@@ -75,13 +75,7 @@ export default class Home extends Component<{}, {
                         </div>
                         <img src="/images/top.png" srcSet="/images/top@2x.png 2x" />
                         <div className="panel">
-                            {Wallet.existsInjectedProvider !== true && <>
-                                {msg({
-                                    ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
-                                    en: "The Klaytn Network could not be found. Please install Kaikas."
-                                })}
-                            </>}
-                            {Wallet.existsInjectedProvider === true && this.state.round === -2 && <>
+                            {this.state.round === -2 && <>
                                 {msg({
                                     ko: "안녕하세요. 저는 도우미 위고입니다! 메이트 홀더들의 소중한 뜻을 담은 개소리를 확인하려면 카이카스에 로그인하세요.",
                                     en: "Hello. I'm a helper wigo! Log in to Kaikas to check the doge sound(Corny joke) that contain the precious meaning of mate holders!"
