@@ -2,30 +2,8 @@ import msg from "msg.js";
 import { Component } from "react";
 import NameForm from "../../component/matename/NameForm";
 import OwnedMates from "../../component/OwnedMates";
-import Wallet from "../../klaytn/Wallet";
 
-export default class MateName extends Component<{}, {
-    connected?: boolean,
-}> {
-
-    constructor(props: {}) {
-        super(props);
-        this.state = {};
-    }
-
-    private connectHandler = () => {
-        this.setState({ connected: true });
-    };
-
-    public async componentDidMount() {
-        Wallet.on("connect", this.connectHandler);
-        this.setState({ connected: await Wallet.connected() });
-    }
-
-    public componentWillUnmount() {
-        Wallet.off("connect", this.connectHandler);
-    }
-
+export default class MateName extends Component {
     public render() {
         return <main id="matename">
             <div className="menu-bar">

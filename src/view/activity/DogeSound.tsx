@@ -2,30 +2,8 @@ import msg from "msg.js";
 import { Component } from "react";
 import DogeSoundContest from "../../component/dogesound/DogeSoundContest";
 import RankList from "../../component/dogesound/RankList";
-import Wallet from "../../klaytn/Wallet";
 
-export default class DogeSound extends Component<{}, {
-    connected?: boolean,
-}> {
-
-    constructor(props: {}) {
-        super(props);
-        this.state = {};
-    }
-
-    private connectHandler = () => {
-        this.setState({ connected: true });
-    };
-
-    public async componentDidMount() {
-        Wallet.on("connect", this.connectHandler);
-        this.setState({ connected: await Wallet.connected() });
-    }
-
-    public componentWillUnmount() {
-        Wallet.off("connect", this.connectHandler);
-    }
-
+export default class DogeSound extends Component {
     public render() {
         return <main id="dogesound">
             <div className="menu-bar">
@@ -69,36 +47,14 @@ export default class DogeSound extends Component<{}, {
                     ko: "도지사운드 역대 우승작",
                     en: "DOGESOUND WINNER HISTORY"
                 })}</h2>
-                {Wallet.existsInjectedProvider !== true && <>
-                    {msg({
-                        ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
-                        en: "The Klaytn Network could not be found. Please install Kaikas."
-                    })}
-                </>}
-                {Wallet.existsInjectedProvider === true && this.state.connected === false && <>
-                    {msg({
-                        ko: "카이카스에 로그인하세요.",
-                    })}
-                </>}
-                {Wallet.existsInjectedProvider === true && this.state.connected === true && <RankList />}
+                <RankList />
             </section>
             <section>
                 <h2>{msg({
                     ko: "도지사운드 경연 현황판",
                     en: "Doge Sound Contest Status Board"
                 })}</h2>
-                {Wallet.existsInjectedProvider !== true && <>
-                    {msg({
-                        ko: "클레이튼 네트워크를 찾을 수 없습니다. Kaikas를 설치해주시기 바랍니다.",
-                        en: "The Klaytn Network could not be found. Please install Kaikas."
-                    })}
-                </>}
-                {Wallet.existsInjectedProvider === true && this.state.connected === false && <>
-                    {msg({
-                        ko: "카이카스에 로그인하세요.",
-                    })}
-                </>}
-                {Wallet.existsInjectedProvider === true && this.state.connected === true && <DogeSoundContest />}
+                <DogeSoundContest />
             </section>
         </main>;
     }

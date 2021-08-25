@@ -22,13 +22,11 @@ class NameContract extends Contract {
     }
 
     public async recordCount(mateId: BigNumberish): Promise<BigNumber> {
-        const contract = await this.loadWalletContract();
-        return BigNumber.from(contract === undefined ? -1 : await contract.methods.recordCount(mateId).call());
+        return BigNumber.from(await this.contract.methods.recordCount(mateId).call());
     }
 
     public async record(mateId: BigNumberish, index: BigNumberish): Promise<NameRecord> {
-        const contract = await this.loadWalletContract();
-        const result = await contract.methods.record(mateId, index).call();
+        const result = await this.contract.methods.record(mateId, index).call();
         return {
             owner: result[0],
             name: result[1],
@@ -37,13 +35,11 @@ class NameContract extends Contract {
     }
 
     public async exists(name: string): Promise<boolean> {
-        const contract = await this.loadWalletContract();
-        return await contract.methods.exists(name).call();
+        return await this.contract.methods.exists(name).call();
     }
 
     public async getName(mateId: BigNumberish): Promise<string> {
-        const contract = await this.loadWalletContract();
-        return await contract.methods.getName(mateId).call();
+        return await this.contract.methods.getName(mateId).call();
     }
 }
 

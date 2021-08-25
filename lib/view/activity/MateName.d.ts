@@ -1,11 +1,5 @@
 import { Component } from "react";
-export default class MateName extends Component<{}, {
-    connected?: boolean;
-}> {
-    constructor(props: {});
-    private connectHandler;
-    componentDidMount(): Promise<void>;
-    componentWillUnmount(): void;
+export default class MateName extends Component {
     render(): JSX.Element;
 }
 //# sourceMappingURL=MateName.d.ts.map
