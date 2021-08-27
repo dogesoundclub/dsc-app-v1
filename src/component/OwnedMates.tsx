@@ -15,6 +15,9 @@ export default class OwnedMates extends Component<{}, {
     }
 
     public async componentDidMount() {
+        if (await Wallet.connected() !== true) {
+            await Wallet.connect();
+        }
         const walletAddress = await Wallet.loadAddress();
         if (walletAddress !== undefined) {
             const balance = (await MateContract.balanceOf(walletAddress)).toNumber();
