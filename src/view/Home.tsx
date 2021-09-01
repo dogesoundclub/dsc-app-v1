@@ -248,7 +248,7 @@ export default class Home extends Component<{}, {
                         {msg({
                             ko: "- 디스코드 : ",
                             en: "- DISCORD :"
-                        })}<a href="https://discord.gg/E3ftHq8x8h">https://discord.gg/E3ftHq8x8h</a><br />
+                        })}<a href="https://discord.gg/RYxgb7dhMY">https://discord.gg/RYxgb7dhMY</a><br />
                         {msg({
                             ko: "- 트위터 : ",
                             en: "- TWITTER :"
