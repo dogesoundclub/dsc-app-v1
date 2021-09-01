@@ -5,6 +5,8 @@ export default {
     // Cypress
     chainId: 8217,
 
+    authorization: "Basic S0FTS0VNMEpVNVZZSjYwTFRMRk1VVlYzOlRTeHlHbnF2dDM1TlJuN2thU0NZdm1FN1JsMjZYdndGVG5yb25fWEw=",
+
     contracts: {
         // Baobab
         /*
